@@ -1,0 +1,3774 @@
+{
+  "schema_version": 1,
+  "categories": [
+    {
+      "id": "fractions",
+      "name": "Fractions",
+      "symbol": "½",
+      "description": "Fractions, ratios and rational expressions"
+    },
+    {
+      "id": "sums",
+      "name": "Sums & Products",
+      "symbol": "∑",
+      "description": "Finite and infinite sums, products, unions"
+    },
+    {
+      "id": "integrals",
+      "name": "Integrals",
+      "symbol": "∫",
+      "description": "Definite, indefinite and multiple integrals"
+    },
+    {
+      "id": "matrices",
+      "name": "Matrices & Vectors",
+      "symbol": "▦",
+      "description": "Matrix environments and vector notation"
+    },
+    {
+      "id": "greek",
+      "name": "Greek Letters",
+      "symbol": "α",
+      "description": "Lower and upper case Greek letters"
+    },
+    {
+      "id": "scripts",
+      "name": "Sub/Superscripts",
+      "symbol": "xⁿ",
+      "description": "Scripts, tensors, factorials and isotopes"
+    },
+    {
+      "id": "roots",
+      "name": "Roots & Radicals",
+      "symbol": "√",
+      "description": "Square roots, nth roots and nested radicals"
+    },
+    {
+      "id": "limits",
+      "name": "Limits",
+      "symbol": "lim",
+      "description": "Limits, asymptotics and epsilon-delta notation"
+    },
+    {
+      "id": "operators",
+      "name": "Operators & Symbols",
+      "symbol": "±",
+      "description": "Relations, logic, sets and arrows"
+    },
+    {
+      "id": "linalg",
+      "name": "Linear Algebra",
+      "symbol": "Aᵀ",
+      "description": "Vector spaces, maps and decompositions"
+    },
+    {
+      "id": "calculus",
+      "name": "Calculus",
+      "symbol": "∂",
+      "description": "Derivatives, vector calculus and transforms"
+    },
+    {
+      "id": "formatting",
+      "name": "Layout & Environments",
+      "symbol": "≣",
+      "description": "Aligned equations, cases and text styling"
+    }
+  ],
+  "snippets": [
+    {
+      "id": "frac-basic",
+      "category": "fractions",
+      "title": "Fraction",
+      "latex": "\\frac{<numerator>}{<denominator>}",
+      "description": "A generic fraction with placeholder numerator and denominator.",
+      "keywords": [
+        "frac",
+        "fraction",
+        "division",
+        "over",
+        "ratio",
+        "rational"
+      ],
+      "preview": "<numerator>/<denominator>"
+    },
+    {
+      "id": "frac-display",
+      "category": "fractions",
+      "title": "Display fraction",
+      "latex": "\\dfrac{<numerator>}{<denominator>}",
+      "description": "A fraction forced to display style, useful inside inline math.",
+      "keywords": [
+        "dfrac",
+        "display",
+        "fraction",
+        "large"
+      ],
+      "preview": "<numerator>/<denominator>"
+    },
+    {
+      "id": "frac-text",
+      "category": "fractions",
+      "title": "Inline fraction",
+      "latex": "\\tfrac{<numerator>}{<denominator>}",
+      "description": "A compact text-style fraction for inline expressions.",
+      "keywords": [
+        "tfrac",
+        "inline",
+        "small",
+        "fraction"
+      ],
+      "preview": "<numerator>/<denominator>"
+    },
+    {
+      "id": "frac-nested",
+      "category": "fractions",
+      "title": "Nested fraction",
+      "latex": "\\frac{\\frac{<a>}{<b>}}{<c>}",
+      "description": "A fraction whose numerator is itself a fraction.",
+      "keywords": [
+        "nested",
+        "compound",
+        "stacked",
+        "fraction"
+      ],
+      "preview": "(<a>/<b>)/<c>"
+    },
+    {
+      "id": "frac-continued",
+      "category": "fractions",
+      "title": "Continued fraction",
+      "latex": "a_0 + \\cfrac{1}{a_1 + \\cfrac{1}{a_2 + \\cfrac{1}{a_3}}}",
+      "description": "A continued fraction with three levels.",
+      "keywords": [
+        "continued",
+        "cfrac",
+        "recursive",
+        "infinite",
+        "fraction"
+      ],
+      "preview": "a₀ + 1/(a₁ + 1/(a₂ + 1/a₃))"
+    },
+    {
+      "id": "frac-mixed",
+      "category": "fractions",
+      "title": "Mixed number",
+      "latex": "<whole>\\frac{<numerator>}{<denominator>}",
+      "description": "A mixed number: whole part followed by a proper fraction.",
+      "keywords": [
+        "mixed",
+        "number",
+        "improper",
+        "fraction"
+      ],
+      "preview": "<whole> <numerator>/<denominator>"
+    },
+    {
+      "id": "frac-rational-eq",
+      "category": "fractions",
+      "title": "Rational equation",
+      "latex": "\\frac{<numerator>}{<denominator>} = 0",
+      "description": "A rational expression set equal to zero.",
+      "keywords": [
+        "rational",
+        "equation",
+        "equals",
+        "zero",
+        "roots"
+      ],
+      "preview": "<numerator>/<denominator> = 0"
+    },
+    {
+      "id": "frac-derivative",
+      "category": "fractions",
+      "title": "Leibniz derivative",
+      "latex": "\\frac{d<y>}{d<x>}",
+      "description": "Derivative written in Leibniz notation.",
+      "keywords": [
+        "derivative",
+        "leibniz",
+        "dy",
+        "dx",
+        "differential"
+      ],
+      "preview": "d<y>/d<x>"
+    },
+    {
+      "id": "frac-partial",
+      "category": "fractions",
+      "title": "Partial derivative",
+      "latex": "\\frac{\\partial <f>}{\\partial <x>}",
+      "description": "A partial derivative with respect to one variable.",
+      "keywords": [
+        "partial",
+        "derivative",
+        "leibniz",
+        "dell"
+      ],
+      "preview": "∂<f>/∂<x>"
+    },
+    {
+      "id": "frac-binomial",
+      "category": "fractions",
+      "title": "Binomial coefficient",
+      "latex": "\\binom{<n>}{<k>}",
+      "description": "A binomial coefficient in stacked notation.",
+      "keywords": [
+        "binomial",
+        "coefficient",
+        "choose",
+        "combination",
+        "nck"
+      ],
+      "preview": "C(<n>, <k>)"
+    },
+    {
+      "id": "frac-percent",
+      "category": "fractions",
+      "title": "Percentage",
+      "latex": "\\frac{<part>}{<whole>} \\times 100\\%",
+      "description": "Convert a ratio to a percentage.",
+      "keywords": [
+        "percentage",
+        "percent",
+        "ratio",
+        "proportion"
+      ],
+      "preview": "<part>/<whole> × 100%"
+    },
+    {
+      "id": "frac-ratio",
+      "category": "fractions",
+      "title": "Ratio equation",
+      "latex": "\\frac{<a>}{<b>} = \\frac{<c>}{<d>}",
+      "description": "Two ratios set equal, for proportion problems.",
+      "keywords": [
+        "ratio",
+        "proportion",
+        "cross",
+        "multiply",
+        "equivalent"
+      ],
+      "preview": "<a>/<b> = <c>/<d>"
+    },
+    {
+      "id": "frac-complex",
+      "category": "fractions",
+      "title": "Complex fraction",
+      "latex": "\\frac{<a> + \\frac{<b>}{<c>}}{<d>}",
+      "description": "A compound fraction with a fraction inside the numerator.",
+      "keywords": [
+        "complex",
+        "compound",
+        "fraction",
+        "nested"
+      ],
+      "preview": "(<a> + <b>/<c>)/<d>"
+    },
+    {
+      "id": "sum-basic",
+      "category": "sums",
+      "title": "Sum over i",
+      "latex": "\\sum_{i=1}^{n} <term>",
+      "description": "Sum a term from i equals one to n.",
+      "keywords": [
+        "sum",
+        "sigma",
+        "summation",
+        "series",
+        "finite"
+      ],
+      "preview": "∑ᵢ₌₁ⁿ <term>"
+    },
+    {
+      "id": "sum-generic",
+      "category": "sums",
+      "title": "Sum with custom bounds",
+      "latex": "\\sum_{i=<start>}^{<end>} <term>",
+      "description": "A summation with editable start and end indices.",
+      "keywords": [
+        "sum",
+        "sigma",
+        "summation",
+        "bounds",
+        "index"
+      ],
+      "preview": "∑ᵢ₌<start>^<end> <term>"
+    },
+    {
+      "id": "sum-infinite",
+      "category": "sums",
+      "title": "Infinite series",
+      "latex": "\\sum_{n=1}^{\\infty} <term>",
+      "description": "An infinite series summed from n equals one.",
+      "keywords": [
+        "infinite",
+        "series",
+        "sum",
+        "sigma",
+        "convergence"
+      ],
+      "preview": "∑ₙ₌₁^∞ <term>"
+    },
+    {
+      "id": "sum-squares",
+      "category": "sums",
+      "title": "Sum of squares",
+      "latex": "\\sum_{i=1}^{n} i^2 = \\frac{n(n+1)(2n+1)}{6}",
+      "description": "Closed form for the sum of the first n squares.",
+      "keywords": [
+        "sum",
+        "squares",
+        "formula",
+        "closed",
+        "form"
+      ],
+      "preview": "∑ᵢ₌₁ⁿ i² = n(n+1)(2n+1)/6"
+    },
+    {
+      "id": "sum-cubes",
+      "category": "sums",
+      "title": "Sum of cubes",
+      "latex": "\\sum_{i=1}^{n} i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2",
+      "description": "Closed form for the sum of the first n cubes.",
+      "keywords": [
+        "sum",
+        "cubes",
+        "formula",
+        "closed",
+        "form"
+      ],
+      "preview": "∑ᵢ₌₁ⁿ i³ = (n(n+1)/2)²"
+    },
+    {
+      "id": "sum-geometric",
+      "category": "sums",
+      "title": "Finite geometric series",
+      "latex": "\\sum_{k=0}^{n} ar^k = a\\frac{1-r^{n+1}}{1-r}, \\quad r \\neq 1",
+      "description": "Closed form of a finite geometric series.",
+      "keywords": [
+        "geometric",
+        "series",
+        "sum",
+        "ratio",
+        "finite"
+      ],
+      "preview": "∑ₖ₌₀ⁿ arᵏ = a(1−rⁿ⁺¹)/(1−r), r ≠ 1"
+    },
+    {
+      "id": "sum-geometric-infinite",
+      "category": "sums",
+      "title": "Infinite geometric series",
+      "latex": "\\sum_{k=0}^{\\infty} ar^k = \\frac{a}{1-r}, \\quad |r| < 1",
+      "description": "Convergent infinite geometric series and its sum.",
+      "keywords": [
+        "geometric",
+        "infinite",
+        "series",
+        "convergence",
+        "ratio"
+      ],
+      "preview": "∑ₖ₌₀^∞ arᵏ = a/(1−r), |r| < 1"
+    },
+    {
+      "id": "sum-index-shift",
+      "category": "sums",
+      "title": "Sum from zero",
+      "latex": "\\sum_{k=0}^{n} <term>",
+      "description": "A summation whose index starts at zero.",
+      "keywords": [
+        "sum",
+        "index",
+        "zero",
+        "sigma"
+      ],
+      "preview": "∑ₖ₌₀ⁿ <term>"
+    },
+    {
+      "id": "sum-double",
+      "category": "sums",
+      "title": "Double sum",
+      "latex": "\\sum_{i=1}^{m}\\sum_{j=1}^{n} <term>",
+      "description": "A double summation over two indices.",
+      "keywords": [
+        "double",
+        "sum",
+        "nested",
+        "sigma",
+        "matrix"
+      ],
+      "preview": "∑ᵢ₌₁ᵐ ∑ⱼ₌₁ⁿ <term>"
+    },
+    {
+      "id": "sum-multi-index",
+      "category": "sums",
+      "title": "Sum over a set",
+      "latex": "\\sum_{<k> \\in <S>} <term>",
+      "description": "Sum over all indices in a set.",
+      "keywords": [
+        "sum",
+        "set",
+        "index",
+        "sigma",
+        "arbitrary"
+      ],
+      "preview": "∑_{<k>∈<S>} <term>"
+    },
+    {
+      "id": "prod-basic",
+      "category": "sums",
+      "title": "Product over i",
+      "latex": "\\prod_{i=1}^{n} <factor>",
+      "description": "Multiply factors from i equals one to n.",
+      "keywords": [
+        "product",
+        "pi",
+        "prod",
+        "multiplication",
+        "factorial"
+      ],
+      "preview": "∏ᵢ₌₁ⁿ <factor>"
+    },
+    {
+      "id": "prod-generic",
+      "category": "sums",
+      "title": "Product with custom bounds",
+      "latex": "\\prod_{k=<start>}^{<end>} <factor>",
+      "description": "A product with editable start and end indices.",
+      "keywords": [
+        "product",
+        "pi",
+        "prod",
+        "bounds",
+        "generic"
+      ],
+      "preview": "∏ₖ₌<start>^<end> <factor>"
+    },
+    {
+      "id": "prod-infinite",
+      "category": "sums",
+      "title": "Infinite product",
+      "latex": "\\prod_{n=1}^{\\infty} <factor>",
+      "description": "An infinite product.",
+      "keywords": [
+        "infinite",
+        "product",
+        "pi",
+        "convergence"
+      ],
+      "preview": "∏ₙ₌₁^∞ <factor>"
+    },
+    {
+      "id": "bigcup",
+      "category": "sums",
+      "title": "Union over a family",
+      "latex": "\\bigcup_{i=1}^{n} <set>",
+      "description": "The union of sets indexed from one to n.",
+      "keywords": [
+        "union",
+        "bigcup",
+        "sets",
+        "family"
+      ],
+      "preview": "⋃ᵢ₌₁ⁿ <set>"
+    },
+    {
+      "id": "bigcap",
+      "category": "sums",
+      "title": "Intersection over a family",
+      "latex": "\\bigcap_{i=1}^{n} <set>",
+      "description": "The intersection of sets indexed from one to n.",
+      "keywords": [
+        "intersection",
+        "bigcap",
+        "sets",
+        "family"
+      ],
+      "preview": "⋂ᵢ₌₁ⁿ <set>"
+    },
+    {
+      "id": "sum-zeta",
+      "category": "sums",
+      "title": "Riemann zeta series",
+      "latex": "\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s}",
+      "description": "The Dirichlet series definition of the Riemann zeta function.",
+      "keywords": [
+        "zeta",
+        "riemann",
+        "series",
+        "sum",
+        "p",
+        "series"
+      ],
+      "preview": "ζ(s) = ∑ₙ₌₁^∞ 1/nˢ"
+    },
+    {
+      "id": "int-indefinite",
+      "category": "integrals",
+      "title": "Indefinite integral",
+      "latex": "\\int <integrand> \\, dx",
+      "description": "An indefinite integral with respect to x.",
+      "keywords": [
+        "integral",
+        "antiderivative",
+        "indefinite"
+      ],
+      "preview": "∫ <integrand> dx"
+    },
+    {
+      "id": "int-definite",
+      "category": "integrals",
+      "title": "Definite integral",
+      "latex": "\\int_{<a>}^{<b>} <integrand> \\, dx",
+      "description": "A definite integral from a to b.",
+      "keywords": [
+        "integral",
+        "definite",
+        "bounds",
+        "area"
+      ],
+      "preview": "∫ₐᵇ <integrand> dx"
+    },
+    {
+      "id": "int-generic",
+      "category": "integrals",
+      "title": "Integral with custom variable",
+      "latex": "\\int_{<a>}^{<b>} <expression> \\, d<variable>",
+      "description": "A definite integral with editable variable and expression.",
+      "keywords": [
+        "integral",
+        "generic",
+        "variable",
+        "bounds"
+      ],
+      "preview": "∫ₐᵇ <expression> d<variable>"
+    },
+    {
+      "id": "int-double",
+      "category": "integrals",
+      "title": "Double integral",
+      "latex": "\\iint_{<D>} <integrand> \\, dA",
+      "description": "A double integral over a region D.",
+      "keywords": [
+        "double",
+        "integral",
+        "area",
+        "iint",
+        "region"
+      ],
+      "preview": "∬_<D> <integrand> dA"
+    },
+    {
+      "id": "int-triple",
+      "category": "integrals",
+      "title": "Triple integral",
+      "latex": "\\iiint_{<V>} <integrand> \\, dV",
+      "description": "A triple integral over a volume V.",
+      "keywords": [
+        "triple",
+        "integral",
+        "volume",
+        "iiint",
+        "region"
+      ],
+      "preview": "∭_<V> <integrand> dV"
+    },
+    {
+      "id": "int-contour",
+      "category": "integrals",
+      "title": "Contour integral",
+      "latex": "\\oint_{<C>} <integrand> \\, dz",
+      "description": "A closed contour integral in the complex plane.",
+      "keywords": [
+        "contour",
+        "complex",
+        "integral",
+        "closed",
+        "curve",
+        "residue"
+      ],
+      "preview": "∮_<C> <integrand> dz"
+    },
+    {
+      "id": "int-line",
+      "category": "integrals",
+      "title": "Line integral",
+      "latex": "\\int_{<C>} \\mathbf{F} \\cdot d\\mathbf{r}",
+      "description": "The line integral of a vector field along a curve C.",
+      "keywords": [
+        "line",
+        "integral",
+        "vector",
+        "field",
+        "curve",
+        "work"
+      ],
+      "preview": "∫_<C> F · dr"
+    },
+    {
+      "id": "int-surface",
+      "category": "integrals",
+      "title": "Surface integral",
+      "latex": "\\iint_{<S>} \\mathbf{F} \\cdot d\\mathbf{S}",
+      "description": "The flux of a vector field through a surface S.",
+      "keywords": [
+        "surface",
+        "integral",
+        "flux",
+        "vector",
+        "field"
+      ],
+      "preview": "∬_<S> F · dS"
+    },
+    {
+      "id": "int-flux",
+      "category": "integrals",
+      "title": "Closed surface integral",
+      "latex": "\\oiint_{<S>} \\mathbf{F} \\cdot d\\mathbf{S}",
+      "description": "Flux through a closed surface, as in Gauss's law.",
+      "keywords": [
+        "closed",
+        "surface",
+        "flux",
+        "oiint",
+        "gauss"
+      ],
+      "preview": "∯_<S> F · dS"
+    },
+    {
+      "id": "int-by-parts",
+      "category": "integrals",
+      "title": "Integration by parts",
+      "latex": "\\int u \\, dv = uv - \\int v \\, du",
+      "description": "The integration-by-parts formula.",
+      "keywords": [
+        "integration",
+        "by",
+        "parts",
+        "uv",
+        "formula"
+      ],
+      "preview": "∫u dv = uv − ∫v du"
+    },
+    {
+      "id": "int-substitution",
+      "category": "integrals",
+      "title": "Integration by substitution",
+      "latex": "\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du",
+      "description": "Change of variables for an indefinite integral.",
+      "keywords": [
+        "substitution",
+        "change",
+        "variables",
+        "u-substitution",
+        "integral"
+      ],
+      "preview": "∫f(g(x))g′(x)dx = ∫f(u)du"
+    },
+    {
+      "id": "int-fourier",
+      "category": "integrals",
+      "title": "Fourier integral",
+      "latex": "\\hat{f}(\\xi) = \\int_{-\\infty}^{\\infty} f(x)e^{-2\\pi i x \\xi}\\,dx",
+      "description": "The Fourier transform written as an integral.",
+      "keywords": [
+        "fourier",
+        "transform",
+        "integral",
+        "exponential",
+        "frequency"
+      ],
+      "preview": "f̂(ξ) = ∫₋∞^∞ f(x)e^(−2πixξ) dx"
+    },
+    {
+      "id": "int-gaussian",
+      "category": "integrals",
+      "title": "Gaussian integral",
+      "latex": "\\int_{-\\infty}^{\\infty} e^{-x^2}\\,dx = \\sqrt{\\pi}",
+      "description": "The classic Gaussian integral.",
+      "keywords": [
+        "gaussian",
+        "integral",
+        "bell",
+        "curve",
+        "pi"
+      ],
+      "preview": "∫₋∞^∞ e^(−x²) dx = √π"
+    },
+    {
+      "id": "int-gamma",
+      "category": "integrals",
+      "title": "Gamma function",
+      "latex": "\\Gamma(z) = \\int_0^{\\infty} t^{z-1}e^{-t}\\,dt",
+      "description": "Euler's integral definition of the gamma function.",
+      "keywords": [
+        "gamma",
+        "function",
+        "euler",
+        "integral",
+        "factorial"
+      ],
+      "preview": "Γ(z) = ∫₀^∞ tᶻ⁻¹e⁻ᵗ dt"
+    },
+    {
+      "id": "int-beta",
+      "category": "integrals",
+      "title": "Beta function",
+      "latex": "B(x,y) = \\int_0^1 t^{x-1}(1-t)^{y-1}\\,dt",
+      "description": "The integral definition of the beta function.",
+      "keywords": [
+        "beta",
+        "function",
+        "integral",
+        "euler"
+      ],
+      "preview": "B(x,y) = ∫₀¹ tˣ⁻¹(1−t)ʸ⁻¹ dt"
+    },
+    {
+      "id": "int-improper",
+      "category": "integrals",
+      "title": "Improper integral",
+      "latex": "\\int_{<a>}^{\\infty} <integrand> \\, dx",
+      "description": "An improper integral extending to infinity.",
+      "keywords": [
+        "improper",
+        "integral",
+        "infinity",
+        "convergence"
+      ],
+      "preview": "∫ₐ^∞ <integrand> dx"
+    },
+    {
+      "id": "int-average",
+      "category": "integrals",
+      "title": "Average value of a function",
+      "latex": "\\frac{1}{b-a}\\int_a^b f(x)\\,dx",
+      "description": "The mean value of f over the interval a to b.",
+      "keywords": [
+        "average",
+        "mean",
+        "value",
+        "function",
+        "integral",
+        "interval"
+      ],
+      "preview": "1/(b−a) ∫ₐᵇ f(x) dx"
+    },
+    {
+      "id": "matrix-bracket",
+      "category": "matrices",
+      "title": "2×2 matrix",
+      "latex": "\\begin{bmatrix} <a_{11}> & <a_{12}> \\\\ <a_{21}> & <a_{22}> \\end{bmatrix}",
+      "description": "A 2 by 2 matrix with square brackets and editable entries.",
+      "keywords": [
+        "matrix",
+        "bmatrix",
+        "2x2",
+        "square",
+        "brackets",
+        "entries"
+      ]
+    },
+    {
+      "id": "matrix-paren",
+      "category": "matrices",
+      "title": "Matrix with parentheses",
+      "latex": "\\begin{pmatrix} <a> & <b> \\\\ <c> & <d> \\end{pmatrix}",
+      "description": "A 2 by 2 matrix with round parentheses.",
+      "keywords": [
+        "matrix",
+        "pmatrix",
+        "parentheses",
+        "2x2"
+      ]
+    },
+    {
+      "id": "matrix-det",
+      "category": "matrices",
+      "title": "Determinant",
+      "latex": "\\begin{vmatrix} <a> & <b> \\\\ <c> & <d> \\end{vmatrix}",
+      "description": "A 2 by 2 determinant with vertical bars.",
+      "keywords": [
+        "determinant",
+        "vmatrix",
+        "bars",
+        "2x2",
+        "det"
+      ]
+    },
+    {
+      "id": "matrix-3x3",
+      "category": "matrices",
+      "title": "3×3 matrix",
+      "latex": "\\begin{bmatrix} <a_{11}> & <a_{12}> & <a_{13}> \\\\ <a_{21}> & <a_{22}> & <a_{23}> \\\\ <a_{31}> & <a_{32}> & <a_{33}> \\end{bmatrix}",
+      "description": "A 3 by 3 matrix with square brackets.",
+      "keywords": [
+        "matrix",
+        "bmatrix",
+        "3x3",
+        "entries"
+      ]
+    },
+    {
+      "id": "matrix-ellipsis",
+      "category": "matrices",
+      "title": "Matrix with ellipses",
+      "latex": "\\begin{bmatrix} <a_{11}> & <a_{12}> & \\cdots & <a_{1n}> \\\\ <a_{21}> & <a_{22}> & \\cdots & <a_{2n}> \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ <a_{m1}> & <a_{m2}> & \\cdots & <a_{mn}> \\end{bmatrix}",
+      "description": "A general m by n matrix using ellipses.",
+      "keywords": [
+        "matrix",
+        "ellipsis",
+        "dots",
+        "general",
+        "m",
+        "n"
+      ]
+    },
+    {
+      "id": "matrix-identity",
+      "category": "matrices",
+      "title": "Identity matrix",
+      "latex": "I_n = \\begin{bmatrix} 1 & 0 & \\cdots & 0 \\\\ 0 & 1 & \\cdots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 0 & 0 & \\cdots & 1 \\end{bmatrix}",
+      "description": "The n by n identity matrix.",
+      "keywords": [
+        "identity",
+        "matrix",
+        "unit",
+        "diagonal"
+      ]
+    },
+    {
+      "id": "matrix-augmented",
+      "category": "matrices",
+      "title": "Augmented matrix",
+      "latex": "\\left[\\begin{array}{cc|c} <a> & <b> & <c> \\\\ <d> & <e> & <f> \\end{array}\\right]",
+      "description": "An augmented coefficient matrix with a vertical divider.",
+      "keywords": [
+        "augmented",
+        "matrix",
+        "array",
+        "system",
+        "linear",
+        "equations"
+      ]
+    },
+    {
+      "id": "matrix-inline",
+      "category": "matrices",
+      "title": "Inline matrix",
+      "latex": "\\begin{smallmatrix} <a> & <b> \\\\ <c> & <d> \\end{smallmatrix}",
+      "description": "A compact matrix for use inside a line of text.",
+      "keywords": [
+        "smallmatrix",
+        "inline",
+        "compact",
+        "matrix"
+      ]
+    },
+    {
+      "id": "matrix-vector-column",
+      "category": "matrices",
+      "title": "Column vector",
+      "latex": "\\mathbf{v} = \\begin{bmatrix} <v_1> \\\\ <v_2> \\\\ \\vdots \\\\ <v_n> \\end{bmatrix}",
+      "description": "A column vector with n entries.",
+      "keywords": [
+        "column",
+        "vector",
+        "bmatrix",
+        "v",
+        "entries"
+      ]
+    },
+    {
+      "id": "matrix-vector-row",
+      "category": "matrices",
+      "title": "Row vector",
+      "latex": "\\mathbf{v} = \\begin{bmatrix} <v_1> & <v_2> & \\cdots & <v_n> \\end{bmatrix}",
+      "description": "A row vector with n entries.",
+      "keywords": [
+        "row",
+        "vector",
+        "bmatrix",
+        "entries"
+      ]
+    },
+    {
+      "id": "matrix-unit-vectors",
+      "category": "matrices",
+      "title": "Standard unit vectors",
+      "latex": "\\hat{\\mathbf{i}}, \\hat{\\mathbf{j}}, \\hat{\\mathbf{k}}",
+      "description": "The three standard basis vectors in R cubed.",
+      "keywords": [
+        "unit",
+        "vectors",
+        "ijk",
+        "basis",
+        "hat"
+      ],
+      "preview": "î, ĵ, k̂"
+    },
+    {
+      "id": "matrix-vector-2d",
+      "category": "matrices",
+      "title": "2D vector",
+      "latex": "\\vec{v} = \\begin{bmatrix} <x> \\\\ <y> \\end{bmatrix}",
+      "description": "A two-dimensional column vector.",
+      "keywords": [
+        "vector",
+        "2d",
+        "column",
+        "xy"
+      ]
+    },
+    {
+      "id": "matrix-norm",
+      "category": "matrices",
+      "title": "Vector norm",
+      "latex": "\\|\\mathbf{v}\\| = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2}",
+      "description": "The Euclidean norm of a vector.",
+      "keywords": [
+        "norm",
+        "magnitude",
+        "vector",
+        "euclidean",
+        "length"
+      ],
+      "preview": "‖v‖ = √(v₁² + v₂² + ⋯ + vₙ²)"
+    },
+    {
+      "id": "matrix-dot-product",
+      "category": "matrices",
+      "title": "Dot product",
+      "latex": "\\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^{n} a_i b_i",
+      "description": "The dot product of two vectors in coordinates.",
+      "keywords": [
+        "dot",
+        "product",
+        "inner",
+        "scalar",
+        "vectors"
+      ],
+      "preview": "a · b = ∑ᵢ₌₁ⁿ aᵢbᵢ"
+    },
+    {
+      "id": "matrix-cross-product",
+      "category": "matrices",
+      "title": "Cross product",
+      "latex": "\\mathbf{a} \\times \\mathbf{b} = \\begin{vmatrix} \\hat{\\mathbf{i}} & \\hat{\\mathbf{j}} & \\hat{\\mathbf{k}} \\\\ a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\end{vmatrix}",
+      "description": "The cross product expressed as a determinant.",
+      "keywords": [
+        "cross",
+        "product",
+        "determinant",
+        "vector",
+        "ijk"
+      ]
+    },
+    {
+      "id": "matrix-transpose",
+      "category": "matrices",
+      "title": "Transpose",
+      "latex": "A^{\\mathsf{T}}",
+      "description": "The transpose of a matrix.",
+      "keywords": [
+        "transpose",
+        "matrix",
+        "t"
+      ],
+      "preview": "Aᵀ"
+    },
+    {
+      "id": "matrix-inverse",
+      "category": "matrices",
+      "title": "Matrix inverse",
+      "latex": "A^{-1} = \\frac{1}{\\det(A)}\\operatorname{adj}(A)",
+      "description": "The inverse of a matrix using its adjugate.",
+      "keywords": [
+        "inverse",
+        "matrix",
+        "adjugate",
+        "determinant"
+      ],
+      "preview": "A⁻¹ = adj(A)/det(A)"
+    },
+    {
+      "id": "matrix-multiplication",
+      "category": "matrices",
+      "title": "Matrix multiplication",
+      "latex": "(AB)_{ij} = \\sum_{k=1}^{n} a_{ik}b_{kj}",
+      "description": "The entrywise definition of matrix multiplication.",
+      "keywords": [
+        "matrix",
+        "multiplication",
+        "product",
+        "entries",
+        "sum"
+      ],
+      "preview": "(AB)ᵢⱼ = ∑ₖ₌₁ⁿ aᵢₖbₖⱼ"
+    },
+    {
+      "id": "matrix-trace",
+      "category": "matrices",
+      "title": "Trace",
+      "latex": "\\operatorname{tr}(A) = \\sum_{i=1}^{n} a_{ii}",
+      "description": "The trace is the sum of diagonal entries.",
+      "keywords": [
+        "trace",
+        "matrix",
+        "diagonal",
+        "sum"
+      ],
+      "preview": "tr(A) = ∑ᵢ₌₁ⁿ aᵢᵢ"
+    },
+    {
+      "id": "matrix-rotation",
+      "category": "matrices",
+      "title": "Rotation matrix",
+      "latex": "R(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix}",
+      "description": "A 2D rotation matrix through angle theta.",
+      "keywords": [
+        "rotation",
+        "matrix",
+        "theta",
+        "trigonometry",
+        "2d"
+      ]
+    },
+    {
+      "id": "matrix-diagonal",
+      "category": "matrices",
+      "title": "Diagonal matrix",
+      "latex": "D = \\operatorname{diag}(<d_1>, <d_2>, \\ldots, <d_n>)",
+      "description": "A diagonal matrix built from its entries.",
+      "keywords": [
+        "diagonal",
+        "matrix",
+        "diag",
+        "entries"
+      ],
+      "preview": "D = diag(<d₁>, <d₂>, …, <dₙ>)"
+    },
+    {
+      "id": "matrix-block",
+      "category": "matrices",
+      "title": "Block matrix",
+      "latex": "\\begin{bmatrix} A & B \\\\ C & D \\end{bmatrix}",
+      "description": "A block matrix with matrix-valued entries.",
+      "keywords": [
+        "block",
+        "matrix",
+        "partitions",
+        "abcd"
+      ]
+    },
+    {
+      "id": "matrix-zero",
+      "category": "matrices",
+      "title": "Zero matrix",
+      "latex": "\\mathbf{0}_{m \\times n}",
+      "description": "The m by n zero matrix.",
+      "keywords": [
+        "zero",
+        "matrix",
+        "null",
+        "m",
+        "n"
+      ],
+      "preview": "0ₘ×ₙ"
+    },
+    {
+      "id": "greek-alpha",
+      "category": "greek",
+      "title": "alpha (lowercase)",
+      "latex": "\\alpha",
+      "description": "Lowercase Greek letter alpha.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "alpha",
+        "a"
+      ],
+      "preview": "α"
+    },
+    {
+      "id": "greek-beta",
+      "category": "greek",
+      "title": "beta (lowercase)",
+      "latex": "\\beta",
+      "description": "Lowercase Greek letter beta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "beta",
+        "b"
+      ],
+      "preview": "β"
+    },
+    {
+      "id": "greek-gamma",
+      "category": "greek",
+      "title": "gamma (lowercase)",
+      "latex": "\\gamma",
+      "description": "Lowercase Greek letter gamma.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "gamma",
+        "g"
+      ],
+      "preview": "γ"
+    },
+    {
+      "id": "greek-delta",
+      "category": "greek",
+      "title": "delta (lowercase)",
+      "latex": "\\delta",
+      "description": "Lowercase Greek letter delta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "delta",
+        "d"
+      ],
+      "preview": "δ"
+    },
+    {
+      "id": "greek-epsilon",
+      "category": "greek",
+      "title": "epsilon (lowercase)",
+      "latex": "\\epsilon",
+      "description": "Lowercase Greek letter epsilon.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "epsilon",
+        "e"
+      ],
+      "preview": "ϵ"
+    },
+    {
+      "id": "greek-varepsilon",
+      "category": "greek",
+      "title": "varepsilon (lowercase)",
+      "latex": "\\varepsilon",
+      "description": "Lowercase Greek letter varepsilon.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varepsilon",
+        "variant",
+        "epsilon",
+        "e"
+      ],
+      "preview": "ε"
+    },
+    {
+      "id": "greek-zeta",
+      "category": "greek",
+      "title": "zeta (lowercase)",
+      "latex": "\\zeta",
+      "description": "Lowercase Greek letter zeta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "zeta",
+        "z"
+      ],
+      "preview": "ζ"
+    },
+    {
+      "id": "greek-eta",
+      "category": "greek",
+      "title": "eta (lowercase)",
+      "latex": "\\eta",
+      "description": "Lowercase Greek letter eta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "eta",
+        "e",
+        "h"
+      ],
+      "preview": "η"
+    },
+    {
+      "id": "greek-theta",
+      "category": "greek",
+      "title": "theta (lowercase)",
+      "latex": "\\theta",
+      "description": "Lowercase Greek letter theta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "theta",
+        "th"
+      ],
+      "preview": "θ"
+    },
+    {
+      "id": "greek-vartheta",
+      "category": "greek",
+      "title": "vartheta (lowercase)",
+      "latex": "\\vartheta",
+      "description": "Lowercase Greek letter vartheta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "vartheta",
+        "variant",
+        "theta",
+        "th"
+      ],
+      "preview": "ϑ"
+    },
+    {
+      "id": "greek-iota",
+      "category": "greek",
+      "title": "iota (lowercase)",
+      "latex": "\\iota",
+      "description": "Lowercase Greek letter iota.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "iota",
+        "i"
+      ],
+      "preview": "ι"
+    },
+    {
+      "id": "greek-kappa",
+      "category": "greek",
+      "title": "kappa (lowercase)",
+      "latex": "\\kappa",
+      "description": "Lowercase Greek letter kappa.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "kappa",
+        "k"
+      ],
+      "preview": "κ"
+    },
+    {
+      "id": "greek-varkappa",
+      "category": "greek",
+      "title": "varkappa (lowercase)",
+      "latex": "\\varkappa",
+      "description": "Lowercase Greek letter varkappa.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varkappa",
+        "variant",
+        "kappa",
+        "k"
+      ],
+      "preview": "ϰ"
+    },
+    {
+      "id": "greek-lambda",
+      "category": "greek",
+      "title": "lambda (lowercase)",
+      "latex": "\\lambda",
+      "description": "Lowercase Greek letter lambda.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "lambda",
+        "l"
+      ],
+      "preview": "λ"
+    },
+    {
+      "id": "greek-mu",
+      "category": "greek",
+      "title": "mu (lowercase)",
+      "latex": "\\mu",
+      "description": "Lowercase Greek letter mu.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "mu",
+        "m"
+      ],
+      "preview": "μ"
+    },
+    {
+      "id": "greek-nu",
+      "category": "greek",
+      "title": "nu (lowercase)",
+      "latex": "\\nu",
+      "description": "Lowercase Greek letter nu.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "nu",
+        "n"
+      ],
+      "preview": "ν"
+    },
+    {
+      "id": "greek-xi",
+      "category": "greek",
+      "title": "xi (lowercase)",
+      "latex": "\\xi",
+      "description": "Lowercase Greek letter xi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "xi",
+        "x"
+      ],
+      "preview": "ξ"
+    },
+    {
+      "id": "greek-pi",
+      "category": "greek",
+      "title": "pi (lowercase)",
+      "latex": "\\pi",
+      "description": "Lowercase Greek letter pi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "pi",
+        "p"
+      ],
+      "preview": "π"
+    },
+    {
+      "id": "greek-varpi",
+      "category": "greek",
+      "title": "varpi (lowercase)",
+      "latex": "\\varpi",
+      "description": "Lowercase Greek letter varpi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varpi",
+        "variant",
+        "pi",
+        "p"
+      ],
+      "preview": "ϖ"
+    },
+    {
+      "id": "greek-rho",
+      "category": "greek",
+      "title": "rho (lowercase)",
+      "latex": "\\rho",
+      "description": "Lowercase Greek letter rho.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "rho",
+        "r"
+      ],
+      "preview": "ρ"
+    },
+    {
+      "id": "greek-varrho",
+      "category": "greek",
+      "title": "varrho (lowercase)",
+      "latex": "\\varrho",
+      "description": "Lowercase Greek letter varrho.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varrho",
+        "variant",
+        "rho",
+        "r"
+      ],
+      "preview": "ϱ"
+    },
+    {
+      "id": "greek-sigma",
+      "category": "greek",
+      "title": "sigma (lowercase)",
+      "latex": "\\sigma",
+      "description": "Lowercase Greek letter sigma.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "sigma",
+        "s"
+      ],
+      "preview": "σ"
+    },
+    {
+      "id": "greek-varsigma",
+      "category": "greek",
+      "title": "varsigma (lowercase)",
+      "latex": "\\varsigma",
+      "description": "Lowercase Greek letter varsigma.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varsigma",
+        "variant",
+        "sigma",
+        "s"
+      ],
+      "preview": "ς"
+    },
+    {
+      "id": "greek-tau",
+      "category": "greek",
+      "title": "tau (lowercase)",
+      "latex": "\\tau",
+      "description": "Lowercase Greek letter tau.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "tau",
+        "t"
+      ],
+      "preview": "τ"
+    },
+    {
+      "id": "greek-upsilon",
+      "category": "greek",
+      "title": "upsilon (lowercase)",
+      "latex": "\\upsilon",
+      "description": "Lowercase Greek letter upsilon.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "upsilon",
+        "u"
+      ],
+      "preview": "υ"
+    },
+    {
+      "id": "greek-phi",
+      "category": "greek",
+      "title": "phi (lowercase)",
+      "latex": "\\phi",
+      "description": "Lowercase Greek letter phi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "phi",
+        "ph"
+      ],
+      "preview": "ϕ"
+    },
+    {
+      "id": "greek-varphi",
+      "category": "greek",
+      "title": "varphi (lowercase)",
+      "latex": "\\varphi",
+      "description": "Lowercase Greek letter varphi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "varphi",
+        "variant",
+        "phi",
+        "ph"
+      ],
+      "preview": "φ"
+    },
+    {
+      "id": "greek-chi",
+      "category": "greek",
+      "title": "chi (lowercase)",
+      "latex": "\\chi",
+      "description": "Lowercase Greek letter chi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "chi",
+        "ch"
+      ],
+      "preview": "χ"
+    },
+    {
+      "id": "greek-psi",
+      "category": "greek",
+      "title": "psi (lowercase)",
+      "latex": "\\psi",
+      "description": "Lowercase Greek letter psi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "psi",
+        "ps"
+      ],
+      "preview": "ψ"
+    },
+    {
+      "id": "greek-omega",
+      "category": "greek",
+      "title": "omega (lowercase)",
+      "latex": "\\omega",
+      "description": "Lowercase Greek letter omega.",
+      "keywords": [
+        "greek",
+        "letter",
+        "lower",
+        "omega",
+        "o"
+      ],
+      "preview": "ω"
+    },
+    {
+      "id": "greek-upper-gamma",
+      "category": "greek",
+      "title": "Gamma (uppercase)",
+      "latex": "\\Gamma",
+      "description": "Uppercase Greek letter Gamma.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Gamma",
+        "g"
+      ],
+      "preview": "Γ"
+    },
+    {
+      "id": "greek-upper-delta",
+      "category": "greek",
+      "title": "Delta (uppercase)",
+      "latex": "\\Delta",
+      "description": "Uppercase Greek letter Delta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Delta",
+        "d"
+      ],
+      "preview": "Δ"
+    },
+    {
+      "id": "greek-upper-theta",
+      "category": "greek",
+      "title": "Theta (uppercase)",
+      "latex": "\\Theta",
+      "description": "Uppercase Greek letter Theta.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Theta",
+        "th"
+      ],
+      "preview": "Θ"
+    },
+    {
+      "id": "greek-upper-lambda",
+      "category": "greek",
+      "title": "Lambda (uppercase)",
+      "latex": "\\Lambda",
+      "description": "Uppercase Greek letter Lambda.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Lambda",
+        "l"
+      ],
+      "preview": "Λ"
+    },
+    {
+      "id": "greek-upper-xi",
+      "category": "greek",
+      "title": "Xi (uppercase)",
+      "latex": "\\Xi",
+      "description": "Uppercase Greek letter Xi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Xi",
+        "x"
+      ],
+      "preview": "Ξ"
+    },
+    {
+      "id": "greek-upper-pi",
+      "category": "greek",
+      "title": "Pi (uppercase)",
+      "latex": "\\Pi",
+      "description": "Uppercase Greek letter Pi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Pi",
+        "p"
+      ],
+      "preview": "Π"
+    },
+    {
+      "id": "greek-upper-sigma",
+      "category": "greek",
+      "title": "Sigma (uppercase)",
+      "latex": "\\Sigma",
+      "description": "Uppercase Greek letter Sigma.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Sigma",
+        "s"
+      ],
+      "preview": "Σ"
+    },
+    {
+      "id": "greek-upper-upsilon",
+      "category": "greek",
+      "title": "Upsilon (uppercase)",
+      "latex": "\\Upsilon",
+      "description": "Uppercase Greek letter Upsilon.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Upsilon",
+        "u"
+      ],
+      "preview": "Υ"
+    },
+    {
+      "id": "greek-upper-phi",
+      "category": "greek",
+      "title": "Phi (uppercase)",
+      "latex": "\\Phi",
+      "description": "Uppercase Greek letter Phi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Phi",
+        "ph"
+      ],
+      "preview": "Φ"
+    },
+    {
+      "id": "greek-upper-psi",
+      "category": "greek",
+      "title": "Psi (uppercase)",
+      "latex": "\\Psi",
+      "description": "Uppercase Greek letter Psi.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Psi",
+        "ps"
+      ],
+      "preview": "Ψ"
+    },
+    {
+      "id": "greek-upper-omega",
+      "category": "greek",
+      "title": "Omega (uppercase)",
+      "latex": "\\Omega",
+      "description": "Uppercase Greek letter Omega.",
+      "keywords": [
+        "greek",
+        "letter",
+        "upper",
+        "capital",
+        "Omega",
+        "o"
+      ],
+      "preview": "Ω"
+    },
+    {
+      "id": "sub-basic",
+      "category": "scripts",
+      "title": "Subscript",
+      "latex": "x_{<i>}",
+      "description": "A variable with a subscript.",
+      "keywords": [
+        "subscript",
+        "index",
+        "lower"
+      ],
+      "preview": "xᵢ"
+    },
+    {
+      "id": "sup-basic",
+      "category": "scripts",
+      "title": "Superscript",
+      "latex": "x^{<n>}",
+      "description": "A variable raised to a power.",
+      "keywords": [
+        "superscript",
+        "exponent",
+        "power",
+        "upper"
+      ],
+      "preview": "xⁿ"
+    },
+    {
+      "id": "sub-sup",
+      "category": "scripts",
+      "title": "Subscript and superscript",
+      "latex": "x_{<i>}^{<n>}",
+      "description": "A variable with both a subscript and a superscript.",
+      "keywords": [
+        "subscript",
+        "superscript",
+        "both",
+        "index",
+        "power"
+      ],
+      "preview": "xᵢⁿ"
+    },
+    {
+      "id": "sup-power",
+      "category": "scripts",
+      "title": "Power of an expression",
+      "latex": "\\left(<base>\\right)^{<exponent>}",
+      "description": "Raise a parenthesised base to a power.",
+      "keywords": [
+        "power",
+        "exponent",
+        "parentheses",
+        "base"
+      ],
+      "preview": "(<base>)^<exponent>"
+    },
+    {
+      "id": "sub-sequence",
+      "category": "scripts",
+      "title": "Finite sequence",
+      "latex": "a_1, a_2, \\ldots, a_n",
+      "description": "A finite sequence written with ellipses.",
+      "keywords": [
+        "sequence",
+        "terms",
+        "list",
+        "finite",
+        "ellipsis"
+      ],
+      "preview": "a₁, a₂, …, aₙ"
+    },
+    {
+      "id": "sup-derivative",
+      "category": "scripts",
+      "title": "Derivative primes",
+      "latex": "f'(x), f''(x), f^{(n)}(x)",
+      "description": "Prime notation for first, second and nth derivatives.",
+      "keywords": [
+        "derivative",
+        "prime",
+        "notation",
+        "order",
+        "n"
+      ],
+      "preview": "f′(x), f″(x), f⁽ⁿ⁾(x)"
+    },
+    {
+      "id": "sup-inverse",
+      "category": "scripts",
+      "title": "Inverse function",
+      "latex": "f^{-1}(x)",
+      "description": "The inverse of a function in superscript notation.",
+      "keywords": [
+        "inverse",
+        "function",
+        "negative",
+        "one"
+      ],
+      "preview": "f⁻¹(x)"
+    },
+    {
+      "id": "tensor",
+      "category": "scripts",
+      "title": "Tensor indices",
+      "latex": "T^{<ij>}_{<kl>}",
+      "description": "A tensor with upper and lower indices.",
+      "keywords": [
+        "tensor",
+        "indices",
+        "upper",
+        "lower",
+        "relativity"
+      ],
+      "preview": "T^<ij>_<kl>"
+    },
+    {
+      "id": "isotope",
+      "category": "scripts",
+      "title": "Isotope notation",
+      "latex": "{}^{<mass>}_{<atomic>}\\mathrm{<element>}",
+      "description": "Nuclear isotope notation with mass and atomic numbers.",
+      "keywords": [
+        "isotope",
+        "chemistry",
+        "mass",
+        "atomic",
+        "element",
+        "nucleus"
+      ]
+    },
+    {
+      "id": "combination",
+      "category": "scripts",
+      "title": "Combination formula",
+      "latex": "\\binom{<n>}{<k>} = \\frac{<n>!}{<k>!(<n>-<k>)!}",
+      "description": "The factorial formula for combinations.",
+      "keywords": [
+        "combination",
+        "binomial",
+        "n",
+        "choose",
+        "k",
+        "factorial"
+      ],
+      "preview": "C(<n>,<k>) = <n>!/(<k>!(<n>−<k>)!)"
+    },
+    {
+      "id": "factorial",
+      "category": "scripts",
+      "title": "Factorial",
+      "latex": "n! = n(n-1)(n-2)\\cdots 1",
+      "description": "The definition of n factorial.",
+      "keywords": [
+        "factorial",
+        "product",
+        "integers"
+      ],
+      "preview": "n! = n(n−1)(n−2)⋯1"
+    },
+    {
+      "id": "sub-text",
+      "category": "scripts",
+      "title": "Labeled subscript",
+      "latex": "x_{\\text{<label>}}",
+      "description": "A subscript containing descriptive text.",
+      "keywords": [
+        "subscript",
+        "text",
+        "label",
+        "descriptive"
+      ],
+      "preview": "x_<label>"
+    },
+    {
+      "id": "nested-sup",
+      "category": "scripts",
+      "title": "Nested exponent",
+      "latex": "e^{e^{<x>}}",
+      "description": "An exponential with another exponential as its exponent.",
+      "keywords": [
+        "nested",
+        "exponent",
+        "power",
+        "tower",
+        "exponential"
+      ],
+      "preview": "e^(e^<x>)"
+    },
+    {
+      "id": "nth-power",
+      "category": "scripts",
+      "title": "Repeated multiplication",
+      "latex": "x^{<n>} = \\underbrace{x \\cdot x \\cdots x}_{<n>\\text{ times}}",
+      "description": "Define a power as repeated multiplication.",
+      "keywords": [
+        "power",
+        "repeated",
+        "multiplication",
+        "underbrace"
+      ],
+      "preview": "xⁿ = x·x⋯x (<n> times)"
+    },
+    {
+      "id": "sqrt-basic",
+      "category": "roots",
+      "title": "Square root",
+      "latex": "\\sqrt{<expression>}",
+      "description": "The square root of an expression.",
+      "keywords": [
+        "square",
+        "root",
+        "sqrt",
+        "radical"
+      ],
+      "preview": "√(<expression>)"
+    },
+    {
+      "id": "sqrt-square",
+      "category": "roots",
+      "title": "Pythagorean root",
+      "latex": "\\sqrt{x^2 + y^2}",
+      "description": "The square root of a sum of squares.",
+      "keywords": [
+        "pythagorean",
+        "distance",
+        "sqrt",
+        "squares"
+      ],
+      "preview": "√(x² + y²)"
+    },
+    {
+      "id": "root-n",
+      "category": "roots",
+      "title": "nth root",
+      "latex": "\\sqrt[<n>]{<expression>}",
+      "description": "An nth root with editable index.",
+      "keywords": [
+        "nth",
+        "root",
+        "radical",
+        "index",
+        "degree"
+      ],
+      "preview": "ⁿ√(<expression>)"
+    },
+    {
+      "id": "root-cube",
+      "category": "roots",
+      "title": "Cube root",
+      "latex": "\\sqrt[3]{<expression>}",
+      "description": "The cube root of an expression.",
+      "keywords": [
+        "cube",
+        "root",
+        "radical",
+        "three"
+      ],
+      "preview": "∛(<expression>)"
+    },
+    {
+      "id": "root-fraction",
+      "category": "roots",
+      "title": "Root of a fraction",
+      "latex": "\\sqrt{\\frac{<numerator>}{<denominator>}}",
+      "description": "The square root of a fraction.",
+      "keywords": [
+        "root",
+        "fraction",
+        "quotient",
+        "sqrt"
+      ],
+      "preview": "√(<numerator>/<denominator>)"
+    },
+    {
+      "id": "root-nested",
+      "category": "roots",
+      "title": "Nested radical",
+      "latex": "\\sqrt{<a> + \\sqrt{<b> + \\sqrt{<c>}}}",
+      "description": "A nested square root expression.",
+      "keywords": [
+        "nested",
+        "radical",
+        "sqrt",
+        "continued"
+      ],
+      "preview": "√(<a> + √(<b> + √<c>))"
+    },
+    {
+      "id": "root-power",
+      "category": "roots",
+      "title": "Root raised to a power",
+      "latex": "\\left(\\sqrt{<x>}\\right)^{<n>}",
+      "description": "A radical raised to an exponent.",
+      "keywords": [
+        "root",
+        "power",
+        "exponent",
+        "sqrt"
+      ],
+      "preview": "(√<x>)ⁿ"
+    },
+    {
+      "id": "root-quadratic",
+      "category": "roots",
+      "title": "Quadratic formula",
+      "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+      "description": "The quadratic formula for roots of a quadratic.",
+      "keywords": [
+        "quadratic",
+        "formula",
+        "roots",
+        "discriminant"
+      ],
+      "preview": "x = (−b ± √(b² − 4ac))/(2a)"
+    },
+    {
+      "id": "root-distance",
+      "category": "roots",
+      "title": "Distance formula",
+      "latex": "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}",
+      "description": "Euclidean distance between two plane points.",
+      "keywords": [
+        "distance",
+        "formula",
+        "points",
+        "geometry",
+        "sqrt"
+      ],
+      "preview": "d = √((x₂−x₁)² + (y₂−y₁)²)"
+    },
+    {
+      "id": "root-pythagorean",
+      "category": "roots",
+      "title": "Pythagorean theorem",
+      "latex": "c^2 = a^2 + b^2 \\quad\\Longrightarrow\\quad c = \\sqrt{a^2 + b^2}",
+      "description": "The Pythagorean theorem and its solved form.",
+      "keywords": [
+        "pythagorean",
+        "theorem",
+        "triangle",
+        "hypotenuse"
+      ],
+      "preview": "c² = a² + b² ⟹ c = √(a² + b²)"
+    },
+    {
+      "id": "lim-basic",
+      "category": "limits",
+      "title": "Limit at a point",
+      "latex": "\\lim_{x \\to <a>} <f(x)>",
+      "description": "The limit of a function as x approaches a.",
+      "keywords": [
+        "limit",
+        "approaches",
+        "point",
+        "calculus"
+      ],
+      "preview": "lim_{x→<a>} <f(x)>"
+    },
+    {
+      "id": "lim-infinity",
+      "category": "limits",
+      "title": "Limit at infinity",
+      "latex": "\\lim_{x \\to \\infty} <f(x)>",
+      "description": "The limit of a function as x tends to infinity.",
+      "keywords": [
+        "limit",
+        "infinity",
+        "tends",
+        "asymptotic"
+      ],
+      "preview": "lim_{x→∞} <f(x)>"
+    },
+    {
+      "id": "lim-neg-infinity",
+      "category": "limits",
+      "title": "Limit at negative infinity",
+      "latex": "\\lim_{x \\to -\\infty} <f(x)>",
+      "description": "The limit of a function as x tends to negative infinity.",
+      "keywords": [
+        "limit",
+        "negative",
+        "infinity",
+        "asymptotic"
+      ],
+      "preview": "lim_{x→−∞} <f(x)>"
+    },
+    {
+      "id": "lim-left",
+      "category": "limits",
+      "title": "Left-hand limit",
+      "latex": "\\lim_{x \\to <a>^-} <f(x)>",
+      "description": "The one-sided limit approaching a from below.",
+      "keywords": [
+        "left",
+        "hand",
+        "limit",
+        "one",
+        "sided",
+        "negative"
+      ],
+      "preview": "lim_{x→<a>⁻} <f(x)>"
+    },
+    {
+      "id": "lim-right",
+      "category": "limits",
+      "title": "Right-hand limit",
+      "latex": "\\lim_{x \\to <a>^+} <f(x)>",
+      "description": "The one-sided limit approaching a from above.",
+      "keywords": [
+        "right",
+        "hand",
+        "limit",
+        "one",
+        "sided",
+        "positive"
+      ],
+      "preview": "lim_{x→<a>⁺} <f(x)>"
+    },
+    {
+      "id": "lim-sequence",
+      "category": "limits",
+      "title": "Limit of a sequence",
+      "latex": "\\lim_{n \\to \\infty} a_n",
+      "description": "The limit of a sequence as n grows without bound.",
+      "keywords": [
+        "sequence",
+        "limit",
+        "infinity",
+        "terms"
+      ],
+      "preview": "lim_{n→∞} aₙ"
+    },
+    {
+      "id": "lim-inf",
+      "category": "limits",
+      "title": "Limit inferior",
+      "latex": "\\liminf_{n \\to \\infty} a_n",
+      "description": "The limit inferior of a sequence.",
+      "keywords": [
+        "limit",
+        "inferior",
+        "liminf",
+        "sequence"
+      ],
+      "preview": "liminf_{n→∞} aₙ"
+    },
+    {
+      "id": "lim-sup",
+      "category": "limits",
+      "title": "Limit superior",
+      "latex": "\\limsup_{n \\to \\infty} a_n",
+      "description": "The limit superior of a sequence.",
+      "keywords": [
+        "limit",
+        "superior",
+        "limsup",
+        "sequence"
+      ],
+      "preview": "limsup_{n→∞} aₙ"
+    },
+    {
+      "id": "lim-derivative",
+      "category": "limits",
+      "title": "Derivative as a limit",
+      "latex": "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h)-f(x)}{h}",
+      "description": "The difference-quotient definition of the derivative.",
+      "keywords": [
+        "derivative",
+        "limit",
+        "difference",
+        "quotient",
+        "definition"
+      ],
+      "preview": "f′(x) = lim_{h→0} (f(x+h)−f(x))/h"
+    },
+    {
+      "id": "lim-epsilon",
+      "category": "limits",
+      "title": "Epsilon-delta definition",
+      "latex": "\\forall \\varepsilon > 0,\\ \\exists \\delta > 0 : 0 < |x-a| < \\delta \\implies |f(x)-L| < \\varepsilon",
+      "description": "The epsilon-delta definition of a limit.",
+      "keywords": [
+        "epsilon",
+        "delta",
+        "definition",
+        "limit",
+        "rigorous"
+      ],
+      "preview": "∀ε>0 ∃δ>0: 0<|x−a|<δ ⟹ |f(x)−L|<ε"
+    },
+    {
+      "id": "lim-lhopital",
+      "category": "limits",
+      "title": "L'Hopital's rule",
+      "latex": "\\lim_{x \\to <a>} \\frac{<f(x)>}{<g(x)>} = \\lim_{x \\to <a>} \\frac{<f'(x)>}{<g'(x)>}",
+      "description": "L'Hopital's rule for indeterminate quotients.",
+      "keywords": [
+        "lhopital",
+        "hospital",
+        "rule",
+        "indeterminate",
+        "limit"
+      ],
+      "preview": "lim f/g = lim f′/g′"
+    },
+    {
+      "id": "lim-asymptote",
+      "category": "limits",
+      "title": "Rational limit at infinity",
+      "latex": "\\lim_{x \\to \\infty} \\frac{<numerator>}{<denominator>}",
+      "description": "Limit of a rational function at infinity.",
+      "keywords": [
+        "rational",
+        "limit",
+        "infinity",
+        "asymptote",
+        "degree"
+      ],
+      "preview": "lim_{x→∞} <numerator>/<denominator>"
+    },
+    {
+      "id": "lim-continuity",
+      "category": "limits",
+      "title": "Continuity at a point",
+      "latex": "\\lim_{x \\to a} f(x) = f(a)",
+      "description": "The limit definition of continuity at a point.",
+      "keywords": [
+        "continuity",
+        "continuous",
+        "limit",
+        "point"
+      ],
+      "preview": "lim_{x→a} f(x) = f(a)"
+    },
+    {
+      "id": "op-pm",
+      "category": "operators",
+      "title": "Plus-minus",
+      "latex": "\\pm",
+      "description": "plus minus sign.",
+      "keywords": [
+        "pm"
+      ],
+      "preview": "±"
+    },
+    {
+      "id": "op-mp",
+      "category": "operators",
+      "title": "Minus-plus",
+      "latex": "\\mp",
+      "description": "minus plus sign.",
+      "keywords": [
+        "mp"
+      ],
+      "preview": "∓"
+    },
+    {
+      "id": "op-times",
+      "category": "operators",
+      "title": "Multiplication cross",
+      "latex": "\\times",
+      "description": "times multiplication cross product.",
+      "keywords": [
+        "times"
+      ],
+      "preview": "×"
+    },
+    {
+      "id": "op-div",
+      "category": "operators",
+      "title": "Division sign",
+      "latex": "\\div",
+      "description": "divide division obelus.",
+      "keywords": [
+        "div"
+      ],
+      "preview": "÷"
+    },
+    {
+      "id": "op-cdot",
+      "category": "operators",
+      "title": "Dot operator",
+      "latex": "\\cdot",
+      "description": "dot multiplication centered.",
+      "keywords": [
+        "cdot"
+      ],
+      "preview": "⋅"
+    },
+    {
+      "id": "op-leq",
+      "category": "operators",
+      "title": "Less than or equal",
+      "latex": "\\leq",
+      "description": "less equal leq at most.",
+      "keywords": [
+        "le"
+      ],
+      "preview": "≤"
+    },
+    {
+      "id": "op-geq",
+      "category": "operators",
+      "title": "Greater than or equal",
+      "latex": "\\geq",
+      "description": "greater equal geq at least.",
+      "keywords": [
+        "ge"
+      ],
+      "preview": "≥"
+    },
+    {
+      "id": "op-neq",
+      "category": "operators",
+      "title": "Not equal",
+      "latex": "\\neq",
+      "description": "not equal neq different.",
+      "keywords": [
+        "ne"
+      ],
+      "preview": "≠"
+    },
+    {
+      "id": "op-approx",
+      "category": "operators",
+      "title": "Approximately equal",
+      "latex": "\\approx",
+      "description": "approximately equal approx.",
+      "keywords": [
+        "approx"
+      ],
+      "preview": "≈"
+    },
+    {
+      "id": "op-equiv",
+      "category": "operators",
+      "title": "Equivalent",
+      "latex": "\\equiv",
+      "description": "equivalent congruence identity.",
+      "keywords": [
+        "equiv"
+      ],
+      "preview": "≡"
+    },
+    {
+      "id": "op-sim",
+      "category": "operators",
+      "title": "Similar",
+      "latex": "\\sim",
+      "description": "similar tilde asymptotic.",
+      "keywords": [
+        "sim"
+      ],
+      "preview": "∼"
+    },
+    {
+      "id": "op-propto",
+      "category": "operators",
+      "title": "Proportional to",
+      "latex": "\\propto",
+      "description": "proportional propto.",
+      "keywords": [
+        "prop"
+      ],
+      "preview": "∝"
+    },
+    {
+      "id": "op-in",
+      "category": "operators",
+      "title": "Element of",
+      "latex": "\\in",
+      "description": "element member in set.",
+      "keywords": [
+        "in"
+      ],
+      "preview": "∈"
+    },
+    {
+      "id": "op-notin",
+      "category": "operators",
+      "title": "Not an element of",
+      "latex": "\\notin",
+      "description": "not element member set.",
+      "keywords": [
+        "notin"
+      ],
+      "preview": "∉"
+    },
+    {
+      "id": "op-subset",
+      "category": "operators",
+      "title": "Subset",
+      "latex": "\\subset",
+      "description": "subset proper contained.",
+      "keywords": [
+        "subset"
+      ],
+      "preview": "⊂"
+    },
+    {
+      "id": "op-subseteq",
+      "category": "operators",
+      "title": "Subset or equal",
+      "latex": "\\subseteq",
+      "description": "subset equal contained.",
+      "keywords": [
+        "subseteq"
+      ],
+      "preview": "⊆"
+    },
+    {
+      "id": "op-supset",
+      "category": "operators",
+      "title": "Superset",
+      "latex": "\\supset",
+      "description": "superset contains.",
+      "keywords": [
+        "supset"
+      ],
+      "preview": "⊃"
+    },
+    {
+      "id": "op-cup",
+      "category": "operators",
+      "title": "Union",
+      "latex": "\\cup",
+      "description": "union cup sets.",
+      "keywords": [
+        "cup"
+      ],
+      "preview": "∪"
+    },
+    {
+      "id": "op-cap",
+      "category": "operators",
+      "title": "Intersection",
+      "latex": "\\cap",
+      "description": "intersection cap sets.",
+      "keywords": [
+        "cap"
+      ],
+      "preview": "∩"
+    },
+    {
+      "id": "op-emptyset",
+      "category": "operators",
+      "title": "Empty set",
+      "latex": "\\emptyset",
+      "description": "empty set null.",
+      "keywords": [
+        "emptyset"
+      ],
+      "preview": "∅"
+    },
+    {
+      "id": "op-forall",
+      "category": "operators",
+      "title": "For all",
+      "latex": "\\forall",
+      "description": "for all universal quantifier.",
+      "keywords": [
+        "forall"
+      ],
+      "preview": "∀"
+    },
+    {
+      "id": "op-exists",
+      "category": "operators",
+      "title": "Exists",
+      "latex": "\\exists",
+      "description": "exists existential quantifier.",
+      "keywords": [
+        "exists"
+      ],
+      "preview": "∃"
+    },
+    {
+      "id": "op-neg",
+      "category": "operators",
+      "title": "Not",
+      "latex": "\\neg",
+      "description": "not negation logical.",
+      "keywords": [
+        "neg"
+      ],
+      "preview": "¬"
+    },
+    {
+      "id": "op-land",
+      "category": "operators",
+      "title": "Logical and",
+      "latex": "\\land",
+      "description": "and logical conjunction.",
+      "keywords": [
+        "land"
+      ],
+      "preview": "∧"
+    },
+    {
+      "id": "op-lor",
+      "category": "operators",
+      "title": "Logical or",
+      "latex": "\\lor",
+      "description": "or logical disjunction.",
+      "keywords": [
+        "lor"
+      ],
+      "preview": "∨"
+    },
+    {
+      "id": "op-implies",
+      "category": "operators",
+      "title": "Implies",
+      "latex": "\\implies",
+      "description": "implies implication logical.",
+      "keywords": [
+        "implies"
+      ],
+      "preview": "⟹"
+    },
+    {
+      "id": "op-iff",
+      "category": "operators",
+      "title": "If and only if",
+      "latex": "\\iff",
+      "description": "if and only if iff equivalence.",
+      "keywords": [
+        "iff"
+      ],
+      "preview": "⟺"
+    },
+    {
+      "id": "op-therefore",
+      "category": "operators",
+      "title": "Therefore",
+      "latex": "\\therefore",
+      "description": "therefore conclusion.",
+      "keywords": [
+        "therefore"
+      ],
+      "preview": "∴"
+    },
+    {
+      "id": "op-because",
+      "category": "operators",
+      "title": "Because",
+      "latex": "\\because",
+      "description": "because reason.",
+      "keywords": [
+        "because"
+      ],
+      "preview": "∵"
+    },
+    {
+      "id": "op-infty",
+      "category": "operators",
+      "title": "Infinity",
+      "latex": "\\infty",
+      "description": "infinity infinite.",
+      "keywords": [
+        "infty"
+      ],
+      "preview": "∞"
+    },
+    {
+      "id": "op-partial",
+      "category": "operators",
+      "title": "Partial derivative symbol",
+      "latex": "\\partial",
+      "description": "partial derivative dell.",
+      "keywords": [
+        "partial"
+      ],
+      "preview": "∂"
+    },
+    {
+      "id": "op-nabla",
+      "category": "operators",
+      "title": "Nabla",
+      "latex": "\\nabla",
+      "description": "nabla gradient del.",
+      "keywords": [
+        "nabla"
+      ],
+      "preview": "∇"
+    },
+    {
+      "id": "op-ell",
+      "category": "operators",
+      "title": "Script l",
+      "latex": "\\ell",
+      "description": "ell script l length.",
+      "keywords": [
+        "ell"
+      ],
+      "preview": "ℓ"
+    },
+    {
+      "id": "op-hbar",
+      "category": "operators",
+      "title": "Reduced Planck constant",
+      "latex": "\\hbar",
+      "description": "hbar planck constant quantum.",
+      "keywords": [
+        "hbar"
+      ],
+      "preview": "ℏ"
+    },
+    {
+      "id": "op-Re",
+      "category": "operators",
+      "title": "Real part",
+      "latex": "\\Re",
+      "description": "real part complex re.",
+      "keywords": [
+        "re"
+      ],
+      "preview": "ℜ"
+    },
+    {
+      "id": "op-Im",
+      "category": "operators",
+      "title": "Imaginary part",
+      "latex": "\\Im",
+      "description": "imaginary part complex im.",
+      "keywords": [
+        "im"
+      ],
+      "preview": "ℑ"
+    },
+    {
+      "id": "op-aleph",
+      "category": "operators",
+      "title": "Aleph",
+      "latex": "\\aleph",
+      "description": "aleph cardinal number infinity.",
+      "keywords": [
+        "aleph"
+      ],
+      "preview": "ℵ"
+    },
+    {
+      "id": "op-angle",
+      "category": "operators",
+      "title": "Angle",
+      "latex": "\\angle",
+      "description": "angle geometry.",
+      "keywords": [
+        "angle"
+      ],
+      "preview": "∠"
+    },
+    {
+      "id": "op-perp",
+      "category": "operators",
+      "title": "Perpendicular",
+      "latex": "\\perp",
+      "description": "perpendicular orthogonal.",
+      "keywords": [
+        "perp"
+      ],
+      "preview": "⊥"
+    },
+    {
+      "id": "op-parallel",
+      "category": "operators",
+      "title": "Parallel",
+      "latex": "\\parallel",
+      "description": "parallel lines norm.",
+      "keywords": [
+        "parallel"
+      ],
+      "preview": "∥"
+    },
+    {
+      "id": "op-cong",
+      "category": "operators",
+      "title": "Congruent",
+      "latex": "\\cong",
+      "description": "congruent isomorphic.",
+      "keywords": [
+        "cong"
+      ],
+      "preview": "≅"
+    },
+    {
+      "id": "op-ll",
+      "category": "operators",
+      "title": "Much less than",
+      "latex": "\\ll",
+      "description": "much less than.",
+      "keywords": [
+        "ll"
+      ],
+      "preview": "≪"
+    },
+    {
+      "id": "op-gg",
+      "category": "operators",
+      "title": "Much greater than",
+      "latex": "\\gg",
+      "description": "much greater than.",
+      "keywords": [
+        "gg"
+      ],
+      "preview": "≫"
+    },
+    {
+      "id": "op-to",
+      "category": "operators",
+      "title": "Tends to",
+      "latex": "\\to",
+      "description": "tends to arrow right limit.",
+      "keywords": [
+        "to"
+      ],
+      "preview": "→"
+    },
+    {
+      "id": "op-mapsto",
+      "category": "operators",
+      "title": "Maps to",
+      "latex": "\\mapsto",
+      "description": "maps to function arrow.",
+      "keywords": [
+        "mapsto"
+      ],
+      "preview": "↦"
+    },
+    {
+      "id": "op-leftarrow",
+      "category": "operators",
+      "title": "Left arrow",
+      "latex": "\\leftarrow",
+      "description": "left arrow direction.",
+      "keywords": [
+        "leftarrow"
+      ],
+      "preview": "←"
+    },
+    {
+      "id": "op-leftrightarrow",
+      "category": "operators",
+      "title": "Left-right arrow",
+      "latex": "\\leftrightarrow",
+      "description": "left right arrow equivalence.",
+      "keywords": [
+        "leftrightarrow"
+      ],
+      "preview": "↔"
+    },
+    {
+      "id": "op-Rightarrow",
+      "category": "operators",
+      "title": "Right implication arrow",
+      "latex": "\\Rightarrow",
+      "description": "right double arrow implication.",
+      "keywords": [
+        "Rightarrow"
+      ],
+      "preview": "⇒"
+    },
+    {
+      "id": "op-Leftrightarrow",
+      "category": "operators",
+      "title": "Equivalence arrow",
+      "latex": "\\Leftrightarrow",
+      "description": "left right double arrow equivalence.",
+      "keywords": [
+        "Leftrightarrow"
+      ],
+      "preview": "⇔"
+    },
+    {
+      "id": "op-oplus",
+      "category": "operators",
+      "title": "Direct sum",
+      "latex": "\\oplus",
+      "description": "direct sum plus circle.",
+      "keywords": [
+        "oplus"
+      ],
+      "preview": "⊕"
+    },
+    {
+      "id": "op-otimes",
+      "category": "operators",
+      "title": "Tensor product",
+      "latex": "\\otimes",
+      "description": "tensor product otimes.",
+      "keywords": [
+        "otimes"
+      ],
+      "preview": "⊗"
+    },
+    {
+      "id": "op-odot",
+      "category": "operators",
+      "title": "Hadamard product",
+      "latex": "\\odot",
+      "description": "hadamard elementwise product odot.",
+      "keywords": [
+        "odot"
+      ],
+      "preview": "⊙"
+    },
+    {
+      "id": "op-mid",
+      "category": "operators",
+      "title": "Divides",
+      "latex": "\\mid",
+      "description": "divides divisor mid.",
+      "keywords": [
+        "mid"
+      ],
+      "preview": "∣"
+    },
+    {
+      "id": "op-nmid",
+      "category": "operators",
+      "title": "Does not divide",
+      "latex": "\\nmid",
+      "description": "does not divide nmid.",
+      "keywords": [
+        "nmid"
+      ],
+      "preview": "∤"
+    },
+    {
+      "id": "op-degree",
+      "category": "operators",
+      "title": "Degree",
+      "latex": "^\\circ",
+      "description": "degree angle circle.",
+      "keywords": [
+        "degree"
+      ],
+      "preview": "°"
+    },
+    {
+      "id": "lin-span",
+      "category": "linalg",
+      "title": "Span",
+      "latex": "\\operatorname{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_n\\}",
+      "description": "The span of a set of vectors.",
+      "keywords": [
+        "span",
+        "linear",
+        "hull",
+        "vectors"
+      ],
+      "preview": "span{v₁, …, vₙ}"
+    },
+    {
+      "id": "lin-basis",
+      "category": "linalg",
+      "title": "Basis",
+      "latex": "\\mathcal{B} = \\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_n\\}",
+      "description": "A basis for a vector space.",
+      "keywords": [
+        "basis",
+        "vector",
+        "space",
+        "b"
+      ],
+      "preview": "ℬ = {v₁, …, vₙ}"
+    },
+    {
+      "id": "lin-kernel",
+      "category": "linalg",
+      "title": "Kernel",
+      "latex": "\\ker(A) = \\{\\mathbf{x} \\in \\mathbb{R}^n : A\\mathbf{x} = \\mathbf{0}\\}",
+      "description": "The kernel or null space of a matrix.",
+      "keywords": [
+        "kernel",
+        "null",
+        "space",
+        "matrix",
+        "solutions"
+      ],
+      "preview": "ker(A) = {x ∈ ℝⁿ : Ax = 0}"
+    },
+    {
+      "id": "lin-image",
+      "category": "linalg",
+      "title": "Image",
+      "latex": "\\operatorname{Im}(A) = \\{A\\mathbf{x} : \\mathbf{x} \\in \\mathbb{R}^n\\}",
+      "description": "The image or column space of a matrix.",
+      "keywords": [
+        "image",
+        "range",
+        "column",
+        "space",
+        "matrix"
+      ],
+      "preview": "Im(A) = {Ax : x ∈ ℝⁿ}"
+    },
+    {
+      "id": "lin-rank",
+      "category": "linalg",
+      "title": "Rank",
+      "latex": "\\operatorname{rank}(A) = \\dim(\\operatorname{Im}(A))",
+      "description": "The rank of a matrix as the dimension of its image.",
+      "keywords": [
+        "rank",
+        "matrix",
+        "dimension",
+        "image"
+      ],
+      "preview": "rank(A) = dim(Im(A))"
+    },
+    {
+      "id": "lin-nullity",
+      "category": "linalg",
+      "title": "Nullity",
+      "latex": "\\operatorname{nullity}(A) = \\dim(\\ker(A))",
+      "description": "The nullity of a matrix as the dimension of its kernel.",
+      "keywords": [
+        "nullity",
+        "matrix",
+        "dimension",
+        "kernel"
+      ],
+      "preview": "nullity(A) = dim(ker(A))"
+    },
+    {
+      "id": "lin-rank-nullity",
+      "category": "linalg",
+      "title": "Rank-nullity theorem",
+      "latex": "\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n",
+      "description": "The rank-nullity theorem for an n-column matrix.",
+      "keywords": [
+        "rank",
+        "nullity",
+        "theorem",
+        "matrix",
+        "dimension"
+      ],
+      "preview": "rank(A) + nullity(A) = n"
+    },
+    {
+      "id": "lin-determinant",
+      "category": "linalg",
+      "title": "Determinant expansion",
+      "latex": "\\det(A) = \\sum_{\\sigma \\in S_n} \\operatorname{sgn}(\\sigma) \\prod_{i=1}^{n} a_{i,\\sigma(i)}",
+      "description": "The Leibniz formula for a determinant.",
+      "keywords": [
+        "determinant",
+        "leibniz",
+        "permutation",
+        "formula"
+      ],
+      "preview": "det(A) = ∑_{σ∈Sₙ} sgn(σ) ∏ᵢ₌₁ⁿ aᵢ,σ(i)"
+    },
+    {
+      "id": "lin-eigen",
+      "category": "linalg",
+      "title": "Eigenvalue equation",
+      "latex": "A\\mathbf{v} = \\lambda \\mathbf{v}",
+      "description": "The defining equation for an eigenvector.",
+      "keywords": [
+        "eigenvalue",
+        "eigenvector",
+        "lambda",
+        "equation"
+      ],
+      "preview": "Av = λv"
+    },
+    {
+      "id": "lin-charpoly",
+      "category": "linalg",
+      "title": "Characteristic polynomial",
+      "latex": "\\chi_A(\\lambda) = \\det(\\lambda I - A)",
+      "description": "The characteristic polynomial of a matrix.",
+      "keywords": [
+        "characteristic",
+        "polynomial",
+        "eigenvalue",
+        "det"
+      ],
+      "preview": "χ_A(λ) = det(λI − A)"
+    },
+    {
+      "id": "lin-diagonalization",
+      "category": "linalg",
+      "title": "Diagonalization",
+      "latex": "A = P D P^{-1}",
+      "description": "A diagonalizable matrix written in terms of its eigenvectors.",
+      "keywords": [
+        "diagonalization",
+        "similar",
+        "diagonal",
+        "matrix"
+      ],
+      "preview": "A = PDP⁻¹"
+    },
+    {
+      "id": "lin-inner-product",
+      "category": "linalg",
+      "title": "Inner product",
+      "latex": "\\langle \\mathbf{u}, \\mathbf{v} \\rangle = \\sum_{i=1}^{n} u_i v_i",
+      "description": "The standard inner product in coordinates.",
+      "keywords": [
+        "inner",
+        "product",
+        "dot",
+        "scalar",
+        "vectors"
+      ],
+      "preview": "⟨u, v⟩ = ∑ᵢ₌₁ⁿ uᵢvᵢ"
+    },
+    {
+      "id": "lin-cauchy-schwarz",
+      "category": "linalg",
+      "title": "Cauchy-Schwarz inequality",
+      "latex": "|\\langle \\mathbf{u}, \\mathbf{v} \\rangle| \\leq \\|\\mathbf{u}\\| \\, \\|\\mathbf{v}\\|",
+      "description": "The Cauchy-Schwarz inequality for inner products.",
+      "keywords": [
+        "cauchy",
+        "schwarz",
+        "inequality",
+        "inner",
+        "product",
+        "norm"
+      ],
+      "preview": "|⟨u,v⟩| ≤ ‖u‖‖v‖"
+    },
+    {
+      "id": "lin-projection",
+      "category": "linalg",
+      "title": "Vector projection",
+      "latex": "\\operatorname{proj}_{\\mathbf{u}}(\\mathbf{v}) = \\frac{\\langle \\mathbf{v}, \\mathbf{u} \\rangle}{\\langle \\mathbf{u}, \\mathbf{u} \\rangle}\\mathbf{u}",
+      "description": "The orthogonal projection of v onto u.",
+      "keywords": [
+        "projection",
+        "orthogonal",
+        "vector",
+        "onto"
+      ],
+      "preview": "proj_u(v) = ⟨v,u⟩/⟨u,u⟩ u"
+    },
+    {
+      "id": "lin-orthogonal",
+      "category": "linalg",
+      "title": "Orthogonality",
+      "latex": "\\mathbf{u} \\perp \\mathbf{v} \\iff \\langle \\mathbf{u}, \\mathbf{v} \\rangle = 0",
+      "description": "Two vectors are orthogonal exactly when their inner product vanishes.",
+      "keywords": [
+        "orthogonal",
+        "perpendicular",
+        "inner",
+        "product",
+        "zero"
+      ],
+      "preview": "u ⟂ v ⟺ ⟨u,v⟩ = 0"
+    },
+    {
+      "id": "lin-svd",
+      "category": "linalg",
+      "title": "Singular value decomposition",
+      "latex": "A = U \\Sigma V^{\\mathsf{T}}",
+      "description": "The singular value decomposition of a matrix.",
+      "keywords": [
+        "svd",
+        "singular",
+        "value",
+        "decomposition"
+      ],
+      "preview": "A = UΣVᵀ"
+    },
+    {
+      "id": "lin-transpose-property",
+      "category": "linalg",
+      "title": "Transpose of a product",
+      "latex": "(AB)^{\\mathsf{T}} = B^{\\mathsf{T}} A^{\\mathsf{T}}",
+      "description": "The transpose reverses the order of a matrix product.",
+      "keywords": [
+        "transpose",
+        "product",
+        "reverse",
+        "order"
+      ],
+      "preview": "(AB)ᵀ = BᵀAᵀ"
+    },
+    {
+      "id": "lin-linear-map",
+      "category": "linalg",
+      "title": "Linear map",
+      "latex": "T: V \\to W",
+      "description": "A linear map from vector space V to W.",
+      "keywords": [
+        "linear",
+        "map",
+        "transformation",
+        "vector",
+        "spaces"
+      ],
+      "preview": "T: V → W"
+    },
+    {
+      "id": "lin-frobenius",
+      "category": "linalg",
+      "title": "Frobenius norm",
+      "latex": "\\|A\\|_F = \\sqrt{\\sum_{i=1}^{m}\\sum_{j=1}^{n} |a_{ij}|^2}",
+      "description": "The Frobenius norm of a matrix.",
+      "keywords": [
+        "frobenius",
+        "norm",
+        "matrix",
+        "entries"
+      ],
+      "preview": "‖A‖_F = √(∑∑|aᵢⱼ|²)"
+    },
+    {
+      "id": "lin-unitary",
+      "category": "linalg",
+      "title": "Unitary matrix",
+      "latex": "U^{*} U = U U^{*} = I",
+      "description": "The defining property of a unitary matrix.",
+      "keywords": [
+        "unitary",
+        "matrix",
+        "conjugate",
+        "transpose",
+        "identity"
+      ],
+      "preview": "U*U = UU* = I"
+    },
+    {
+      "id": "calc-derivative",
+      "category": "calculus",
+      "title": "Derivative",
+      "latex": "\\frac{d}{dx}\\left[<f(x)>\\right]",
+      "description": "The derivative of an expression with respect to x.",
+      "keywords": [
+        "derivative",
+        "differentiate",
+        "d",
+        "dx"
+      ],
+      "preview": "d/dx[<f(x)>]"
+    },
+    {
+      "id": "calc-partial",
+      "category": "calculus",
+      "title": "Partial derivative",
+      "latex": "\\frac{\\partial <f>}{\\partial <x>}",
+      "description": "A partial derivative with respect to x.",
+      "keywords": [
+        "partial",
+        "derivative",
+        "multivariable"
+      ],
+      "preview": "∂<f>/∂<x>"
+    },
+    {
+      "id": "calc-second",
+      "category": "calculus",
+      "title": "Second derivative",
+      "latex": "\\frac{d^2<y>}{d<x>^2}",
+      "description": "The second derivative of y with respect to x.",
+      "keywords": [
+        "second",
+        "derivative",
+        "order",
+        "two",
+        "d2"
+      ],
+      "preview": "d²<y>/d<x>²"
+    },
+    {
+      "id": "calc-mixed-partial",
+      "category": "calculus",
+      "title": "Mixed partial derivative",
+      "latex": "\\frac{\\partial^2 <f>}{\\partial <x> \\partial <y>}",
+      "description": "A second mixed partial derivative.",
+      "keywords": [
+        "mixed",
+        "partial",
+        "second",
+        "derivative"
+      ],
+      "preview": "∂²<f>/∂<x>∂<y>"
+    },
+    {
+      "id": "calc-chain",
+      "category": "calculus",
+      "title": "Chain rule",
+      "latex": "\\frac{d}{dx} f(g(x)) = f'(g(x)) g'(x)",
+      "description": "The chain rule for differentiating a composition.",
+      "keywords": [
+        "chain",
+        "rule",
+        "derivative",
+        "composition"
+      ],
+      "preview": "d/dx f(g(x)) = f′(g(x))g′(x)"
+    },
+    {
+      "id": "calc-product",
+      "category": "calculus",
+      "title": "Product rule",
+      "latex": "(fg)' = f'g + fg'",
+      "description": "The product rule for derivatives.",
+      "keywords": [
+        "product",
+        "rule",
+        "derivative"
+      ],
+      "preview": "(fg)′ = f′g + fg′"
+    },
+    {
+      "id": "calc-quotient",
+      "category": "calculus",
+      "title": "Quotient rule",
+      "latex": "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}",
+      "description": "The quotient rule for derivatives.",
+      "keywords": [
+        "quotient",
+        "rule",
+        "derivative",
+        "fraction"
+      ],
+      "preview": "(f/g)′ = (f′g − fg′)/g²"
+    },
+    {
+      "id": "calc-gradient",
+      "category": "calculus",
+      "title": "Gradient",
+      "latex": "\\nabla f = \\left( \\frac{\\partial f}{\\partial x_1}, \\ldots, \\frac{\\partial f}{\\partial x_n} \\right)",
+      "description": "The gradient vector of a scalar function.",
+      "keywords": [
+        "gradient",
+        "nabla",
+        "partial",
+        "vector"
+      ],
+      "preview": "∇f = (∂f/∂x₁, …, ∂f/∂xₙ)"
+    },
+    {
+      "id": "calc-divergence",
+      "category": "calculus",
+      "title": "Divergence",
+      "latex": "\\nabla \\cdot \\mathbf{F} = \\frac{\\partial F_1}{\\partial x} + \\frac{\\partial F_2}{\\partial y} + \\frac{\\partial F_3}{\\partial z}",
+      "description": "The divergence of a three-dimensional vector field.",
+      "keywords": [
+        "divergence",
+        "nabla",
+        "dot",
+        "vector",
+        "field"
+      ],
+      "preview": "∇·F = ∂F₁/∂x + ∂F₂/∂y + ∂F₃/∂z"
+    },
+    {
+      "id": "calc-curl",
+      "category": "calculus",
+      "title": "Curl",
+      "latex": "\\nabla \\times \\mathbf{F} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ \\partial_x & \\partial_y & \\partial_z \\\\ F_x & F_y & F_z \\end{vmatrix}",
+      "description": "The curl of a vector field as a determinant.",
+      "keywords": [
+        "curl",
+        "rotation",
+        "vector",
+        "field",
+        "nabla",
+        "cross"
+      ]
+    },
+    {
+      "id": "calc-laplacian",
+      "category": "calculus",
+      "title": "Laplacian",
+      "latex": "\\nabla^2 f = \\sum_{i=1}^{n} \\frac{\\partial^2 f}{\\partial x_i^2}",
+      "description": "The Laplacian operator applied to a scalar function.",
+      "keywords": [
+        "laplacian",
+        "nabla",
+        "squared",
+        "second",
+        "derivative"
+      ],
+      "preview": "∇²f = ∑ᵢ₌₁ⁿ ∂²f/∂xᵢ²"
+    },
+    {
+      "id": "calc-taylor",
+      "category": "calculus",
+      "title": "Taylor series",
+      "latex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n",
+      "description": "The Taylor series of f about a.",
+      "keywords": [
+        "taylor",
+        "series",
+        "expansion",
+        "derivatives"
+      ],
+      "preview": "f(x) = ∑ₙ₌₀^∞ f⁽ⁿ⁾(a)/n! (x−a)ⁿ"
+    },
+    {
+      "id": "calc-maclaurin",
+      "category": "calculus",
+      "title": "Maclaurin series",
+      "latex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(0)}{n!}x^n",
+      "description": "The Maclaurin series of f about zero.",
+      "keywords": [
+        "maclaurin",
+        "series",
+        "expansion",
+        "zero"
+      ],
+      "preview": "f(x) = ∑ₙ₌₀^∞ f⁽ⁿ⁾(0)/n! xⁿ"
+    },
+    {
+      "id": "calc-jacobian",
+      "category": "calculus",
+      "title": "Jacobian matrix",
+      "latex": "J = \\begin{bmatrix} \\frac{\\partial f_1}{\\partial x_1} & \\cdots & \\frac{\\partial f_1}{\\partial x_n} \\\\ \\vdots & \\ddots & \\vdots \\\\ \\frac{\\partial f_m}{\\partial x_1} & \\cdots & \\frac{\\partial f_m}{\\partial x_n} \\end{bmatrix}",
+      "description": "The Jacobian matrix of a vector-valued function.",
+      "keywords": [
+        "jacobian",
+        "matrix",
+        "partial",
+        "derivatives",
+        "transformation"
+      ]
+    },
+    {
+      "id": "calc-hessian",
+      "category": "calculus",
+      "title": "Hessian matrix",
+      "latex": "H_f = \\begin{bmatrix} \\frac{\\partial^2 f}{\\partial x_1^2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_1 \\partial x_n} \\\\ \\vdots & \\ddots & \\vdots \\\\ \\frac{\\partial^2 f}{\\partial x_n \\partial x_1} & \\cdots & \\frac{\\partial^2 f}{\\partial x_n^2} \\end{bmatrix}",
+      "description": "The Hessian matrix of second partial derivatives.",
+      "keywords": [
+        "hessian",
+        "matrix",
+        "second",
+        "partial",
+        "derivatives"
+      ]
+    },
+    {
+      "id": "calc-fourier",
+      "category": "calculus",
+      "title": "Fourier transform",
+      "latex": "\\mathcal{F}\\{f(t)\\}(\\omega) = \\int_{-\\infty}^{\\infty} f(t)e^{-i\\omega t}\\,dt",
+      "description": "The Fourier transform of a function of time.",
+      "keywords": [
+        "fourier",
+        "transform",
+        "frequency",
+        "integral"
+      ],
+      "preview": "ℱ{f(t)}(ω) = ∫₋∞^∞ f(t)e^(−iωt) dt"
+    },
+    {
+      "id": "calc-laplace",
+      "category": "calculus",
+      "title": "Laplace transform",
+      "latex": "\\mathcal{L}\\{f(t)\\}(s) = \\int_0^{\\infty} f(t)e^{-st}\\,dt",
+      "description": "The one-sided Laplace transform.",
+      "keywords": [
+        "laplace",
+        "transform",
+        "integral",
+        "s",
+        "domain"
+      ],
+      "preview": "ℒ{f(t)}(s) = ∫₀^∞ f(t)e^(−st) dt"
+    },
+    {
+      "id": "calc-directional",
+      "category": "calculus",
+      "title": "Directional derivative",
+      "latex": "D_{\\mathbf{u}}f(\\mathbf{x}) = \\nabla f(\\mathbf{x}) \\cdot \\mathbf{u}",
+      "description": "The directional derivative along a unit vector.",
+      "keywords": [
+        "directional",
+        "derivative",
+        "gradient",
+        "dot",
+        "unit",
+        "vector"
+      ],
+      "preview": "D_u f(x) = ∇f(x) · u"
+    },
+    {
+      "id": "calc-fundamental",
+      "category": "calculus",
+      "title": "Fundamental theorem of calculus",
+      "latex": "\\int_a^b f'(x)\\,dx = f(b) - f(a)",
+      "description": "The fundamental theorem of calculus.",
+      "keywords": [
+        "fundamental",
+        "theorem",
+        "calculus",
+        "integral",
+        "derivative"
+      ],
+      "preview": "∫ₐᵇ f′(x) dx = f(b) − f(a)"
+    },
+    {
+      "id": "calc-total-differential",
+      "category": "calculus",
+      "title": "Total differential",
+      "latex": "df = \\sum_{i=1}^{n} \\frac{\\partial f}{\\partial x_i} dx_i",
+      "description": "The total differential of a multivariable function.",
+      "keywords": [
+        "total",
+        "differential",
+        "partial",
+        "derivatives"
+      ],
+      "preview": "df = ∑ᵢ₌₁ⁿ ∂f/∂xᵢ dxᵢ"
+    },
+    {
+      "id": "calc-arc-length",
+      "category": "calculus",
+      "title": "Arc length",
+      "latex": "L = \\int_a^b \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^2}\\,dx",
+      "description": "The arc length of a curve y = f(x).",
+      "keywords": [
+        "arc",
+        "length",
+        "curve",
+        "integral",
+        "derivative"
+      ],
+      "preview": "L = ∫ₐᵇ √(1 + (dy/dx)²) dx"
+    },
+    {
+      "id": "calc-volume-revolution",
+      "category": "calculus",
+      "title": "Volume of revolution",
+      "latex": "V = \\pi \\int_a^b \\left[f(x)\\right]^2\\,dx",
+      "description": "Volume of a solid of revolution about the x-axis.",
+      "keywords": [
+        "volume",
+        "revolution",
+        "solid",
+        "disk",
+        "integral"
+      ],
+      "preview": "V = π ∫ₐᵇ f(x)² dx"
+    },
+    {
+      "id": "env-aligned",
+      "category": "formatting",
+      "title": "Aligned equations",
+      "latex": "\\begin{aligned} <lhs_1> &= <rhs_1> \\\\ <lhs_2> &= <rhs_2> \\end{aligned}",
+      "description": "A block of equations aligned at the equals signs.",
+      "keywords": [
+        "aligned",
+        "equations",
+        "block",
+        "align",
+        "equals"
+      ],
+      "preview": "lhs₁ = rhs₁\nlhs₂ = rhs₂"
+    },
+    {
+      "id": "env-cases",
+      "category": "formatting",
+      "title": "Piecewise cases",
+      "latex": "\\begin{cases} <expression_1>, & <condition_1> \\\\ <expression_2>, & <condition_2> \\end{cases}",
+      "description": "A piecewise function with two cases and conditions.",
+      "keywords": [
+        "cases",
+        "piecewise",
+        "function",
+        "conditions",
+        "branch"
+      ]
+    },
+    {
+      "id": "env-array",
+      "category": "formatting",
+      "title": "Array environment",
+      "latex": "\\begin{array}{<cc>} <a> & <b> \\\\ <c> & <d> \\end{array}",
+      "description": "A generic array with an editable column specification.",
+      "keywords": [
+        "array",
+        "table",
+        "grid",
+        "columns",
+        "align"
+      ]
+    },
+    {
+      "id": "fmt-text",
+      "category": "formatting",
+      "title": "Text inside math",
+      "latex": "\\text{<text>}",
+      "description": "Insert upright text inside a math expression.",
+      "keywords": [
+        "text",
+        "words",
+        "upright",
+        "roman"
+      ],
+      "preview": "text"
+    },
+    {
+      "id": "fmt-mathbf",
+      "category": "formatting",
+      "title": "Bold math",
+      "latex": "\\mathbf{<x>}",
+      "description": "Bold upright letters, commonly used for vectors.",
+      "keywords": [
+        "bold",
+        "mathbf",
+        "vector",
+        "matrix"
+      ],
+      "preview": "𝐱"
+    },
+    {
+      "id": "fmt-mathbb",
+      "category": "formatting",
+      "title": "Blackboard bold",
+      "latex": "\\mathbb{<R>}",
+      "description": "Blackboard bold letters for number sets.",
+      "keywords": [
+        "blackboard",
+        "bold",
+        "mathbb",
+        "real",
+        "numbers"
+      ],
+      "preview": "ℝ"
+    },
+    {
+      "id": "fmt-mathcal",
+      "category": "formatting",
+      "title": "Calligraphic letters",
+      "latex": "\\mathcal{<F>}",
+      "description": "Calligraphic letters for families and transforms.",
+      "keywords": [
+        "calligraphic",
+        "mathcal",
+        "script"
+      ],
+      "preview": "ℱ"
+    },
+    {
+      "id": "fmt-mathscr",
+      "category": "formatting",
+      "title": "Script letters",
+      "latex": "\\mathscr{<F>}",
+      "description": "Script-style letters for spaces and families.",
+      "keywords": [
+        "mathscr",
+        "script",
+        "letters"
+      ],
+      "preview": "ℱ"
+    },
+    {
+      "id": "fmt-operatorname",
+      "category": "formatting",
+      "title": "Named operator",
+      "latex": "\\operatorname{<name>}(<x>)",
+      "description": "Declare a named operator such as rank or span.",
+      "keywords": [
+        "operatorname",
+        "named",
+        "operator",
+        "rank",
+        "span"
+      ],
+      "preview": "name(<x>)"
+    },
+    {
+      "id": "fmt-delimiters",
+      "category": "formatting",
+      "title": "Scaled delimiters",
+      "latex": "\\left( <expression> \\right)",
+      "description": "Parentheses that scale with their contents.",
+      "keywords": [
+        "left",
+        "right",
+        "delimiters",
+        "parentheses",
+        "scalable"
+      ],
+      "preview": "(<expression>)"
+    },
+    {
+      "id": "fmt-abs",
+      "category": "formatting",
+      "title": "Absolute value",
+      "latex": "\\left| <expression> \\right|",
+      "description": "Absolute value bars that scale with their contents.",
+      "keywords": [
+        "absolute",
+        "value",
+        "bars",
+        "modulus"
+      ],
+      "preview": "|<expression>|"
+    },
+    {
+      "id": "fmt-norm",
+      "category": "formatting",
+      "title": "Norm bars",
+      "latex": "\\left\\| <expression> \\right\\|",
+      "description": "Double bars for a norm.",
+      "keywords": [
+        "norm",
+        "double",
+        "bars",
+        "magnitude"
+      ],
+      "preview": "‖<expression>‖"
+    },
+    {
+      "id": "fmt-ceil",
+      "category": "formatting",
+      "title": "Ceiling",
+      "latex": "\\left\\lceil <x> \\right\\rceil",
+      "description": "The ceiling function: least integer greater than or equal to x.",
+      "keywords": [
+        "ceiling",
+        "ceil",
+        "round",
+        "up"
+      ],
+      "preview": "⌈<x>⌉"
+    },
+    {
+      "id": "fmt-floor",
+      "category": "formatting",
+      "title": "Floor",
+      "latex": "\\left\\lfloor <x> \\right\\rfloor",
+      "description": "The floor function: greatest integer less than or equal to x.",
+      "keywords": [
+        "floor",
+        "round",
+        "down",
+        "greatest",
+        "integer"
+      ],
+      "preview": "⌊<x>⌋"
+    },
+    {
+      "id": "fmt-spacing",
+      "category": "formatting",
+      "title": "Horizontal spacing",
+      "latex": "<a> \\quad <b> \\qquad <c>",
+      "description": "Insert fixed horizontal space in a formula.",
+      "keywords": [
+        "spacing",
+        "quad",
+        "qquad",
+        "space",
+        "horizontal"
+      ],
+      "preview": "<a>  <b>   <c>"
+    },
+    {
+      "id": "fmt-boxed",
+      "category": "formatting",
+      "title": "Boxed expression",
+      "latex": "\\boxed{<expression>}",
+      "description": "Draw a box around an expression.",
+      "keywords": [
+        "box",
+        "boxed",
+        "frame",
+        "highlight"
+      ],
+      "preview": "▭ <expression>"
+    },
+    {
+      "id": "fmt-underbrace",
+      "category": "formatting",
+      "title": "Underbrace with label",
+      "latex": "\\underbrace{<expression>}_{<label>}",
+      "description": "An underbrace that labels a part of an expression.",
+      "keywords": [
+        "underbrace",
+        "label",
+        "annotation"
+      ],
+      "preview": "<expression> under <label>"
+    },
+    {
+      "id": "fmt-overbrace",
+      "category": "formatting",
+      "title": "Overbrace with label",
+      "latex": "\\overbrace{<expression>}^{<label>}",
+      "description": "An overbrace that labels a part of an expression.",
+      "keywords": [
+        "overbrace",
+        "label",
+        "annotation"
+      ],
+      "preview": "<expression> over <label>"
+    },
+    {
+      "id": "fmt-displaystyle",
+      "category": "formatting",
+      "title": "Display style",
+      "latex": "\\displaystyle <expression>",
+      "description": "Force display-style sizing inside inline math.",
+      "keywords": [
+        "displaystyle",
+        "large",
+        "limits",
+        "inline"
+      ],
+      "preview": "<expression>"
+    },
+    {
+      "id": "fmt-substack",
+      "category": "formatting",
+      "title": "Stacked subscripts",
+      "latex": "\\sum_{\\substack{<i=1> \\\\ <j=1>}} <term>",
+      "description": "Stack multiple lines in a subscript.",
+      "keywords": [
+        "substack",
+        "stacked",
+        "subscript",
+        "lines"
+      ],
+      "preview": "∑_{i=1; j=1} <term>"
+    },
+    {
+      "id": "fmt-color",
+      "category": "formatting",
+      "title": "Colored expression",
+      "latex": "\\color{<color>}{<expression>}",
+      "description": "Color an expression in a LaTeX document.",
+      "keywords": [
+        "color",
+        "colour",
+        "red",
+        "highlight"
+      ],
+      "preview": "<expression>"
+    },
+    {
+      "id": "fmt-newline",
+      "category": "formatting",
+      "title": "Line break in math",
+      "latex": "<expression_1> \\\\ <expression_2>",
+      "description": "Start a new line inside a display math environment.",
+      "keywords": [
+        "line",
+        "break",
+        "newline",
+        "row"
+      ],
+      "preview": "<expression₁>\n<expression₂>"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latex-picker"
+version = "2.0.0"
+description = "LaTeX picker, equation editor, calculator, grapher and linear algebra workspace for Linux desktops"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LaTeX Picker contributors" }]
+keywords = ["latex", "math", "picker", "wayland", "clipboard", "qt"]
+classifiers = [
+    "Environment :: X11 Applications :: Qt",
+    "Environment :: Wayland",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+]
+dependencies = ["PyQt6>=6.5", "sympy>=1.12", "numpy>=1.24", "matplotlib>=3.6", "scipy>=1.10"]
+
+[project.optional-dependencies]
+preview = ["matplotlib>=3.6"]
+
+[project.scripts]
+latex-picker = "latex_picker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/AbdelrhmanEbied/latex-picker"
+Issues = "https://github.com/AbdelrhmanEbied/latex-picker/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"latex_picker.data" = ["*.json", "*.svg"]

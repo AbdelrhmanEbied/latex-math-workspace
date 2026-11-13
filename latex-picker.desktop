@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=LaTeX Picker
+GenericName=LaTeX Math Picker
+Comment=Search and copy LaTeX mathematical notation
+Exec=latex-picker
+Icon=latex-picker
+Terminal=false
+StartupNotify=false
+StartupWMClass=latex-picker
+Categories=Utility;Education;
+Keywords=latex;math;formula;equation;symbol;notation;integral;matrix;

@@ -8,7 +8,7 @@
 Search 266 LaTeX snippets, build equations by clicking, compute with a CAS,
 plot graphs and row-reduce matrices — then copy clean LaTeX anywhere.
 
-[![tests](https://github.com/AbdelrhmanEbied/latex-picker/actions/workflows/tests.yml/badge.svg)](https://github.com/AbdelrhmanEbied/latex-picker/actions/workflows/tests.yml)
+[![tests](https://github.com/AbdelrhmanEbied/latex-math-workspace/actions/workflows/tests.yml/badge.svg)](https://github.com/AbdelrhmanEbied/latex-math-workspace/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Qt](https://img.shields.io/badge/PyQt6-GUI-41CD52?logo=qt&logoColor=white)
 ![Wayland](https://img.shields.io/badge/Wayland%20%26%20X11-supported-FFBC00)
@@ -200,8 +200,8 @@ sudo dnf install python3 python3-pyqt6 python3-sympy python3-numpy python3-scipy
 ## Installation
 
 ```bash
-git clone https://github.com/AbdelrhmanEbied/latex-picker.git
-cd latex-picker
+git clone https://github.com/AbdelrhmanEbied/latex-math-workspace.git
+cd latex-math-workspace
 ./install.sh --configure     # installs, then sets up Super+Shift+L
 ```
 
